@@ -1,0 +1,11 @@
+{
+  "name": "celesnik-dental-website",
+  "version": "1.0.0",
+  "description": "Premium, SEO-optimized multilingual website for Dentalno estetski studio Nina Celesnik",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx -y http-server -p 8080 ."
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

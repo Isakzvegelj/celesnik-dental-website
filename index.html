@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Preconnect for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Critical Above-the-Fold CSS Inline -->
+  <style>
+    :root{--color-primary:hsl(218,32%,16%);--color-secondary:hsl(38,32%,54%);--color-secondary-hover:hsl(38,38%,46%);--color-bg-base:hsl(210,20%,98%);--color-text-dark:hsl(218,25%,12%);--color-text-light:hsl(210,15%,94%);--color-muted:hsl(218,12%,42%);--color-glass-bg:rgba(255,255,255,0.75);--color-glass-border:rgba(158,142,112,0.15);--font-heading:'Outfit',sans-serif;--font-body:'Inter',sans-serif;--max-width:1280px;--header-height:80px;--border-radius-sm:8px;--border-radius-md:16px;--transition-smooth:all 0.4s cubic-bezier(0.16,1,0.3,1);--transition-fast:all 0.2s ease}.*{box-sizing:border-box;margin:0;padding:0}body{font-family:var(--font-body);background-color:var(--color-bg-base);color:var(--color-text-dark);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:500;color:var(--color-primary);line-height:1.25}.hero{height:100vh;min-height:700px;position:relative;overflow:hidden;display:flex;align-items:center;color:#fff;background-color:var(--color-primary)}.hero-video-bg{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;opacity:0.45;z-index:1}.hero-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(to bottom,rgba(28,41,54,0.8)0%,rgba(18,22,26,0.8)100%);z-index:2}.hero .container{z-index:3}.hero-content{max-width:680px;animation:fadeInUp 1s cubic-bezier(0.16,1,0.3,1)both}.hero h1{font-size:3.5rem;font-weight:600;color:#fff;margin-bottom:24px;letter-spacing:-0.02em;line-height:1.15}.hero h1 span{color:var(--color-secondary)}.hero-desc{font-size:1.25rem;color:var(--color-text-light);margin-bottom:40px;font-weight:300}.hero-buttons{display:flex;gap:16px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 28px;font-family:var(--font-heading);font-weight:500;font-size:0.95rem;border-radius:var(--border-radius-sm);border:none;cursor:pointer;transition:var(--transition-smooth);letter-spacing:0.02em}.btn-primary{background-color:var(--color-primary);color:#fff;border:1px solid var(--color-primary)}.site-header{position:fixed;top:0;left:0;width:100%;height:var(--header-height);z-index:1000;transition:var(--transition-smooth);background-color:rgba(18,28,38,0.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(158,142,112,0.2)}.nav-container{height:100%;display:flex;align-items:center;justify-content:space-between}.logo{display:flex;align-items:center;gap:12px}.nav-menu{display:flex;align-items:center;gap:32px}.nav-link{font-family:var(--font-heading);font-size:0.95rem;font-weight:500;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,0.3);position:relative}.@media (max-width: 768px){.nav-menu{display:none}.hero h1{font-size:2.75rem}}#skip-to-content{position:absolute;top:-40px;left:0;background:var(--color-primary);color:#fff;padding:8px 16px;z-index:10000;transition:top 0.3s}#skip-to-content:focus{top:0}@keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+  </style>
+
+  <!-- Preload critical hero image -->
+  <link rel="preload" as="image" href="assets/hero_smile.jpg" imagesrcset="assets/hero_smile.webp 1x, assets/hero_smile.jpg 2x">
+
+  <!-- Premium SEO Meta Tags -->
+  <title>Dentalno estetski studio dr. Nina Čelesnik | Zobozdravnik Bled</title>
+  <meta name="description" content="Vrhunsko estetsko zobozdravstvo, implantologija in splošna zobozdravstvena oskrba na Bledu z več kot 50-letno družinsko tradicijo. Rezervirajte svoj termin varno brez prekrivanja koledarjev.">
+  <meta name="keywords" content="zobozdravnik Bled, Nina Čelesnik, estetsko zobozdravstvo, implantati Bled, zobna protetika, ugoden zobozdravnik Bled, čiščenje zobnega kamna, Emil Čelesnik, zobozdravstvena ordinacija Bled">
+  <link rel="canonical" href="https://celesnikdental.com/">
+
+  <!-- Hreflang for Multilingual SEO -->
+  <link rel="alternate" hreflang="sl" href="https://celesnikdental.com/">
+  <link rel="alternate" hreflang="en" href="https://celesnikdental.com/en.html">
+  <link rel="alternate" hreflang="de" href="https://celesnikdental.com/de.html">
+  <link rel="alternate" hreflang="it" href="https://celesnikdental.com/it.html">
+  <link rel="alternate" hreflang="x-default" href="https://celesnikdental.com/">
+
+  <!-- Open Graph (Facebook/Social) -->
+  <meta property="og:title" content="Dentalno estetski studio dr. Nina Čelesnik | Zobozdravnik Bled">
+  <meta property="og:description" content="Izjemna estetika in vrhunska zobozdravstvena nega z več kot 50-letno tradicijo na Bledu. Spoznajte našo ekipo za vrhunsko oskrbo.">
+  <meta property="og:image" content="assets/hero_smile.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="styles.css"></noscript>
+
+  <!-- Unique IDs on all interactive elements for structured testing -->
+  <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23121c26%22/><text y=%2272%22 x=%2225%22 font-family=%22serif%22 font-size=%2265%22 font-weight=%22bold%22 fill=%22%239e8e70%22>Č</text></svg>">
+
+  <!-- Skip to content for accessibility -->
+  <style>#skip-to-content{position:absolute;top:-40px;left:0;background:var(--color-primary);color:#fff;padding:8px 16px;z-index:10000;transition:top 0.3s}#skip-to-content:focus{top:0}}</style>
+
+  <!-- ==========================================
+     JSON-LD LocalBusiness Schema Markup for Local SEO
+     This explicitly tells Google's index that Nina's practice is a separate,
+     highly rated entity from her brother's at the same address.
+     ========================================== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "Dentalno estetski studio Nina Čelesnik",
+    "image": "assets/logo.png",
+    "@id": "https://celesnikdental.com/#dentist",
+    "url": "https://celesnikdental.com",
+    "telephone": "+38645750801",
+    "email": "des.celesnik@gmail.com",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Prešernova cesta 15 (DES)",
+      "addressLocality": "Bled",
+      "postalCode": "4260",
+      "addressCountry": "SI"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 46.3688,
+      "longitude": 14.1142
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "16:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/explore/tags/celesnikdental/"
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "87"
+    }
+  }
+  </script>
+</head>
+<body>
+  <a href="#main-content" id="skip-to-content" style="position:absolute;top:-40px;left:0;background:var(--color-primary);color:#fff;padding:8px 16px;z-index:10000;transition:top 0.3s">Skip to main content</a>
+
+  <!-- ==========================================
+       NAVIGATION HEADER
+       ========================================== -->
+  <header class="site-header" id="main-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo" id="header-logo" style="gap: 16px;">
+        <img src="assets/logo.png" alt="Dentalno estetski studio Čelesnik" style="width: auto; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(28, 41, 54, 0.05));" id="header-logo-img">
+      </a>
+      
+          <button class="nav-toggle" id="nav-toggle" aria-label="Odpri menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <button class="nav-toggle" id="nav-toggle" aria-label="Odpri menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+      <nav class="nav-menu" id="header-navigation-menu">
+        <a href="#tradicija" class="nav-link" id="nav-link-tradition">Tradicija</a>
+        <a href="#storitve" class="nav-link" id="nav-link-services">Storitve</a>
+        <a href="#cenik" class="nav-link" id="nav-link-prices">Cenik</a>
+        <a href="#galerija" class="nav-link" id="nav-link-gallery">Galerija</a>
+        <a href="#ekipa" class="nav-link" id="nav-link-team">Ekipa</a>
+        <a href="#mnenja" class="nav-link" id="nav-link-reviews">Mnenja</a>
+        <a href="#narocanje" class="nav-link" id="nav-link-booking">Naročanje</a>
+      </nav>
+      
+      <div class="nav-actions">
+        <!-- Language Switcher Redirection for multi-page Local SEO indexing -->
+        <div class="lang-switcher" id="language-switcher-widget">
+          <a href="index.html" class="lang-btn active" id="lang-sl-btn">SL</a>
+          <a href="en.html" class="lang-btn" id="lang-en-btn">EN</a>
+          <a href="de.html" class="lang-btn" id="lang-de-btn">DE</a>
+          <a href="it.html" class="lang-btn" id="lang-it-btn">IT</a>
+        </div>
+        <a href="#narocanje" class="btn btn-outline" style="padding: 10px 20px; font-size: 0.85rem;" id="nav-action-booking-btn">Naročite se</a>
+      </div>
+    </div>
+  </header>
+
+<!-- Hero section -->
+   <section class="hero" id="home-hero" aria-label="Dental studio hero banner">
+     <picture>
+       <source srcset="assets/hero_smile.webp" type="image/webp">
+       <img src="assets/hero_smile.jpg" alt="Zdrav in čudovit estetski nasmeh" class="hero-video-bg" id="hero-background-media" width="1920" height="1080" fetchpriority="high">
+     </picture>
+     <div class="hero-overlay" aria-hidden="true"></div>
+    
+    <div class="container">
+      <div class="hero-content">
+        <span class="badge" id="hero-badge-tag">Dolgoletna družinska tradicija</span>
+        <h1>Ustvarjamo nasmehe, ki trajajo <span>generacije</span>.</h1>
+        <p class="hero-desc">Estetika in zdravje v srcu Bleda. Dr. Nina Čelesnik in njena ekipa se zavzemata, da so vaši zobje ne le zdravi, ampak resnično lepi — vaš nasmeh je umetnost.</p>
+        <div class="hero-buttons">
+          <a href="#narocanje" class="btn btn-primary" id="hero-primary-cta-btn">Rezervirajte termin</a>
+          <a href="#storitve" class="btn btn-outline hero-btn-alt" id="hero-secondary-cta-btn">Spoznajte storitve</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Audio toggle (Ambient procedural spa music player) -->
+    <button class="music-control" aria-label="Predvajaj sproščujočo glasbo v ozadju" id="ambient-audio-toggle-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+        <line x1="23" y1="9" x2="17" y2="15"></line>
+        <line x1="17" y1="9" x2="23" y2="15"></line>
+      </svg>
+    </button>
+  </section>
+
+<!-- Statistics Bar -->
+   <section class="stats-bar" id="clinic-stats-bar" aria-label="Clinic statistics and trust indicators">
+     <div class="container">
+       <div class="glass-panel stats-grid" id="stats-grid-container">
+         <div class="stat-item" id="stat-item-years">
+           <div class="stat-num" id="counter-years">50+</div>
+           <div class="stat-label" aria-label="Years of dental tradition">Let tradicije</div>
+         </div>
+         <div class="stat-item" id="stat-item-patients">
+           <div class="stat-num" id="counter-patients">15k+</div>
+           <div class="stat-label" aria-label="Happy patients">Zadovoljnih pacientov</div>
+         </div>
+         <div class="stat-item" id="stat-item-reviews">
+           <div class="stat-num" id="counter-rating">4.9<span aria-label="star rating">★</span></div>
+           <div class="stat-label" aria-label="Google rating">Google ocena</div>
+         </div>
+         <div class="stat-item" id="stat-item-calendar">
+           <div class="stat-num" id="counter-calendar">100%</div>
+           <div class="stat-label" aria-label="Secure booking guarantee">Varno naročanje</div>
+         </div>
+       </div>
+     </div>
+   </section>
+
+   <!-- Main content for skip link -->
+   <main id="main-content">
+
+  <!-- ==========================================
+     CLINIC HISTORY / CONCEPT SECTION
+     ========================================== -->
+  <section class="section-padding" id="tradicija">
+    <div class="container concept-grid">
+      <div class="concept-img-wrapper" id="concept-visual-wrapper">
+        <img src="assets/gallery_3.jpg" alt="Precizno zobozdravstveno delo dr. Nine Čelesnik" class="concept-img" id="concept-primary-image">
+        <div class="concept-badge" id="concept-badge-widget">
+          <div class="concept-badge-title">dr. Nina Čelesnik</div>
+          <div class="concept-badge-sub">Nadaljevanje zapuščine dr. Emila Čelesnika</div>
+        </div>
+      </div>
+      
+      <div class="concept-text" id="concept-text-container">
+        <span class="badge">Zgodovina & Zapuščina</span>
+        <h2>Več kot 50 let predanosti popolnosti</h2>
+        <p>Naš studio ima najdaljšo zasebno tradicijo zobozdravstvene dejavnosti v Sloveniji. Ustanovil jo je dr. Emil Čelesnik, ki je v naš prostor prinesel prve napredne tehnike estetskega porcelana in postavil temelje moderne estetske stomatologije. Dr. Emil ni iskal samo funkcije — iskal je popolno estetiko, zobe, ki niso le zdravi, ampak resnično lepi. Njegove legendarne mojstrovine — kot sta izjemna rekonstrukcija človeške lobanje za kongres v Beogradu leta 1986 in sloviti zlati kačji porcelanski zobje, predstavljeni v Nürnbergu leta 1989 — so osupnile mednarodno strokovno javnost z neverjetno zvesto imitacijo naravnih zob in vrhunsko preciznostjo.</p>
+        
+        <div class="concept-quote">
+          "Umetnost je zvesta reprodukcija naravne resničnosti."
+        </div>
+        
+        <p>Danes to bogato zapuščino z enako ljubeznijo, preciznostjo in estetskim čutom nadaljuje njegova hči, dr. Nina Čelesnik. Njen studio se enako posveča estetiki kot zobozdravstveni odličnosti — ker naj bo vaš nasmeh ne le zdrav, ampak resnično čudovit. Studio se nahaja v samem srcu Bleda, le korake od jezera in vse turistične ponudbe.</p>
+        <a href="#narocanje" class="btn btn-primary" id="concept-cta-btn">Spoznajte naš pristop</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+     SERVICES SECTION
+     ========================================== -->
+  <section class="section-padding" style="background-color: rgba(28, 41, 54, 0.02); border-top: 1px solid var(--color-glass-border); border-bottom: 1px solid var(--color-glass-border);" id="storitve">
+    <div class="container">
+      <div class="text-center">
+        <span class="badge" id="services-badge">Prilagojene rešitve</span>
+        <h2 class="section-title">Izberite raven oskrbe, ki jo potrebujete</h2>
+        <p class="section-subtitle">Zasnovali smo dva ločena nivoja storitev, ki zagotavljata popolno varnost, hitrost in transparentno dostopnost za vsakega pacienta.</p>
+      </div>
+
+      <div class="services-tier-container" id="services-funnel-container">
+        <!-- TIER 1: ELITE & AESTHETIC CARE (dr. Nina Čelesnik) -->
+        <div class="glass-panel service-tier-card" style="border-top: 4px solid var(--color-secondary);" id="service-tier-elite">
+          <div class="tier-header">
+            <div class="tier-title-container">
+              <h3 class="tier-title">Premium & Estetska Oskrba</h3>
+              <span class="tier-tag elite">dr. Nina Čelesnik</span>
+            </div>
+            <p class="tier-subtitle">Specialistična oskrba za najbolj zahtevne estetske in protetične rekonstrukcije.</p>
+          </div>
+
+          <div class="tier-services-list">
+            <div class="service-list-item">
+              <div class="service-icon">1</div>
+              <div class="service-details">
+                <h4>Vrhunske zobne luske (Veneers)</h4>
+                <p>Natančna, ročno dokončana porcelanska dela za popoln, naraven nasmeh in prenovo zobne barve.</p>
+              </div>
+            </div>
+            <div class="service-list-item">
+              <div class="service-icon">2</div>
+              <div class="service-details">
+                <h4>Kompleksna zobna protetika</h4>
+                <p>Polnoporcelanski mostički, krone in estetika brez kovin, prilagojena vaši anatomiji obraza.</p>
+              </div>
+            </div>
+            <div class="service-list-item">
+              <div class="service-icon">3</div>
+              <div class="service-details">
+                <h4>Premium Implantologija</h4>
+                <p>Trajne in varne nadomestitve manjkajočih zob z vrhunskimi materiali in minimalno invazivnim pristopom.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="tier-footer">
+            <p class="tier-price-hint">Storitve izvaja dr. Nina Čelesnik osebno po predhodni rezervaciji.</p>
+            <a href="#narocanje" class="btn btn-primary" style="width: 100%;" onclick="document.getElementById('dentist-type').value='specialist';" id="tier-elite-cta-btn">Rezervirajte Specialistično oskrbo</a>
+          </div>
+        </div>
+
+        <!-- TIER 2: GENERAL & GENERAL FAMILY CARE (dr. Nina Čelesnik s sodelavkami) -->
+        <div class="glass-panel service-tier-card" style="border-top: 4px solid var(--color-primary);" id="service-tier-general">
+          <div class="tier-header">
+            <div class="tier-title-container">
+              <h3 class="tier-title">Splošno & Preventivno Zobozdravstvo</h3>
+              <span class="tier-tag general">Splošna nega</span>
+            </div>
+            <p class="tier-subtitle">Hitra, visoko kakovostna in cenovno dostopnejša zobozdravstvena oskrba za vso družino.</p>
+          </div>
+
+          <div class="tier-services-list">
+            <div class="service-list-item">
+              <div class="service-icon">✓</div>
+              <div class="service-details">
+                <h4>Ugodne zalivke in plombe</h4>
+                <p>Estetske bele zalivke iz najsodobnejših kompozitnih materialov po dostopnih cenah.</p>
+              </div>
+            </div>
+            <div class="service-list-item">
+              <div class="service-icon">✓</div>
+              <div class="service-details">
+                <h4>Čiščenje zobnega kamna & Ustna higiena</h4>
+                <p>Strokovna preventivna nega, peskanje in odstranjevanje oblog za ohranjanje zdravih dlesni.</p>
+              </div>
+            </div>
+            <div class="service-list-item">
+              <div class="service-icon">✓</div>
+              <div class="service-details">
+                <h4>Koreninsko zdravljenje (Endodontija)</h4>
+                <p>Natančna reševanja poškodovanih ali obolelih zob s sodobno strojno tehniko.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="tier-footer">
+            <p class="tier-price-hint">Odlična možnost za rutinske preglede, čiščenja in manjša popravke z izjemno konkurenčnimi cenami.</p>
+            <a href="#narocanje" class="btn btn-outline" style="width: 100%;" onclick="document.getElementById('dentist-type').value='general';" id="tier-general-cta-btn">Rezervirajte Splošno oskrbo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+     PRICING SECTION (CENIK)
+     ========================================== -->
+  <section class="section-padding pricing-section" id="cenik" style="border-bottom: 1px solid var(--color-glass-border);">
+    <div class="container">
+      <div class="text-center">
+        <span class="badge">Uradni Cenik Storitev</span>
+        <h2 class="section-title">Transparentne cene za vrhunsko oskrbo</h2>
+        <p class="section-subtitle">Vse cene so jasne, transparentne in skladne z dejansko ravnjo naših vrhunskih storitev brez skritih stroškov.</p>
+      </div>
+
+      <div class="pricing-grid" id="prices-grid-container">
+        <!-- Card 1: Splošno & Preventivno zobozdravstvo -->
+        <div class="glass-panel pricing-card" id="pricing-card-preventive">
+          <h3>Splošna & Preventivna Oskrba</h3>
+          <div class="pricing-list">
+            <div class="price-item">
+              <span class="price-name">RTG Ortopan slikanje</span>
+              <span class="price-val">30 EUR</span>
+            </div>
+            <div class="price-item">
+              <span class="price-name">Zalitje fisur (tesnjenje zoba za otroke)</span>
+              <span class="price-val">30 - 40 EUR</span>
+            </div>
+            <div class="price-item">
+              <span class="price-name">Ekstrakcija (enostavno puljenje)</span>
+              <span class="price-val">40 - 60 EUR</span>
+            </div>
+            <div class="price-item">
+              <span class="price-name">Čiščenje zobnega kamna, peskanje in poliranje</span>
+              <span class="price-val">40 - 100 EUR</span>
+            </div>
+            <div class="price-item">
+              <span class="price-name">Bela plomba (zalivka)</span>
+              <span class="price-val">40 - 120 EUR</span>
+            </div>
+            <div class="price-item">
+              <span class="price-name">Ekstrakcija (komplicirana ali operativna)</span>
+              <span class="price-val">80 - 140 EUR</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Estetika & Protetika -->
+        <div class="glass-panel pricing-card" id="pricing-card-aesthetic">
+          <h3>Estetika, Protetika & Implantati</h3>
+          <div class="pricing-list">
+            <div class="price-item">
+              <span class="price-name">Koreninsko zdravljenje (enokoreninski)</span>
+              <span class="price-val">130 EUR</span>
+            </div>
+            <div class="price-item">
+              <span class="price-name">Dograditev kosti (Bio-Oss material)</span>
+              <span class="price-val">150 - 480 EUR</span>
+            </div>
+            <div class="price-item">
+              <span class="price-name">Koreninsko zdravljenje (večkoreninski)</span>
+              <span class="price-val">250 EUR</span>
+            </div>
+            <div class="price-item">
+              <span class="price-name">Kovinsko-porcelanska prevleka</span>
+              <span class="price-val">380 EUR</span>
+            </div>
+            <div class="price-item">
+              <span class="price-name">Clear Aligner nevidni ortodontski aparat</span>
+              <span class="price-val">od 450 EUR</span>
+            </div>
+            <div class="price-item">
+              <span class="price-name">Porcelanska luska (Veneer)</span>
+              <span class="price-val">470 EUR</span>
+            </div>
+            <div class="price-item">
+              <span class="price-name">Brezkovinska prevleka (cirkonij)</span>
+              <span class="price-val">470 EUR</span>
+            </div>
+            <div class="price-item">
+              <span class="price-name">Zobni vsadek (Premium Implantat)</span>
+              <span class="price-val">800 EUR</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Promo Banner: Free consult -->
+        <div class="pricing-promo-banner" id="pricing-promo-consult">
+          <div class="pricing-promo-title">BREZPLAČEN prvi pregled in posvet</div>
+          <div class="pricing-promo-desc">
+            Zagotovite si brezplačno RTG analizo, strokovni posvet ter natančno pripravo finančnega načrta brez kakršnihkoli obveznosti.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+     GALLERY SECTION
+     ========================================== -->
+  <section class="section-padding" style="background-color: rgba(28, 41, 54, 0.02); border-top: 1px solid var(--color-glass-border); border-bottom: 1px solid var(--color-glass-border);" id="galerija">
+    <div class="container">
+      <div class="text-center">
+        <span class="badge">Galerija del in prostorov</span>
+        <h2 class="section-title">Utrinki iz našega studia</h2>
+        <p class="section-subtitle">Oglejte si naše sodobne prostore na Bledu in vrhunske rezultate estetskih zobozdravstvenih prenov.</p>
+      </div>
+
+      <div class="gallery-grid" id="clinic-gallery-container">
+        <div class="gallery-item">
+          <img src="assets/gallery_1.jpg" alt="Estetska zobozdravstvena ordinacija" loading="lazy" width="600" height="400">
+          <div class="gallery-overlay-hover">
+            <span class="gallery-tag">Ordinacija</span>
+            <h4 class="gallery-title">Sodobna zobozdravstvena oprema</h4>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/gallery_2.jpg" alt="Vrhunska protetična rehabilitacija" loading="lazy" width="600" height="400">
+          <div class="gallery-overlay-hover">
+            <span class="gallery-tag">Estetika</span>
+            <h4 class="gallery-title">Vrhunska estetska protetika</h4>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/gallery_3.jpg" alt="Natančno delo dr. Nine" loading="lazy" width="600" height="400">
+          <div class="gallery-overlay-hover">
+            <span class="gallery-tag">Specialistična nega</span>
+            <h4 class="gallery-title">Preciznost in estetika</h4>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/gallery_4.jpg" alt="Prenova nasmeha" loading="lazy" width="600" height="400">
+          <div class="gallery-overlay-hover">
+            <span class="gallery-tag">Nasmeh</span>
+            <h4 class="gallery-title">Popolna rekonstrukcija nasmeha</h4>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/gallery_5.jpg" alt="Sproščujoče okolje klinike" loading="lazy" width="600" height="400">
+          <div class="gallery-overlay-hover">
+            <span class="gallery-tag">Ambient</span>
+            <h4 class="gallery-title">Udobje in dobro počutje</h4>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/hero_smile.jpg" alt="Zdrav in lep nasmeh" loading="lazy" width="600" height="400">
+          <div class="gallery-overlay-hover">
+            <span class="gallery-tag">Rezultat</span>
+            <h4 class="gallery-title">Zdrav in sijoč nasmeh</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Before & After Smile Slider Showcase -->
+      <div class="text-center" style="margin-top: 60px;">
+        <span class="badge">Interaktivni prikaz</span>
+        <h3 class="section-title" style="font-size: 1.75rem; margin-top: 10px;">Čudežne estetske preobrazbe</h3>
+        <p class="section-subtitle" style="margin-bottom: 20px;">Povlecite zlati drsnik levo in desno za neposredno primerjavo stanja zob pred in po namestitvi naših vrhunskih porcelanskih lusk.</p>
+      </div>
+
+      <div class="before-after-slider-wrapper">
+        <!-- Before image (underneath) -->
+        <div class="slider-img slider-img-before">
+          <img src="assets/before_veneer.jpg" alt="Zobje pred estetsko prenovo nasmeha" onerror="this.style.opacity='0';" style="width:100%; height:100%; object-fit:cover;">
+          <div class="slider-label slider-label-before">Prej (Okvarjeno stanje)</div>
+        </div>
+        
+        <!-- After image (on top, cropped dynamically) -->
+        <div class="slider-img slider-img-after">
+          <img src="assets/after_veneer.jpg" alt="Sijoč nasmeh po namestitvi porcelanskih lusk" onerror="this.style.opacity='0';" style="width:100%; height:100%; object-fit:cover;">
+          <div class="slider-label slider-label-after">Potem (Sijoč nasmeh DES)</div>
+        </div>
+
+        <!-- Vertical Divider Line -->
+        <div class="slider-divider-line"></div>
+
+        <!-- Drag Handle Button -->
+        <div class="slider-divider-handle">
+          <span class="slider-handle-arrows">◀ ▶</span>
+        </div>
+
+        <!-- Range Input Overlay -->
+        <input type="range" min="0" max="100" value="50" class="slider-range-input" id="before-after-range-control">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+     LAKE BLED DESTINATION SECTION
+     ========================================== -->
+  <section id="bled" style="position:relative; overflow:hidden; min-height: 420px; display:flex; align-items:center;">
+    <img src="assets/lake_bled_wellness.png" alt="Blejsko jezero" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0;">
+    <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,rgba(20,32,46,0.82) 0%,rgba(20,32,46,0.5) 60%,rgba(20,32,46,0.2) 100%);z-index:1;"></div>
+    <div class="container" style="position:relative;z-index:2;padding-top:80px;padding-bottom:80px;">
+      <div style="max-width:680px;">
+        <span class="badge" style="background-color:rgba(255,255,255,0.12);color:var(--color-secondary);margin-bottom:20px;display:inline-block;">Bled, Slovenija</span>
+        <h2 style="color:#fff;font-size:clamp(1.8rem,4vw,2.8rem);margin-bottom:20px;line-height:1.2;">Kombinirajte zobozdravstveni obisk z<br><span style="color:var(--color-secondary);">oddihom ob Blejskem jezeru</span></h2>
+        <p style="color:rgba(255,255,255,0.88);font-size:1.05rem;line-height:1.75;margin-bottom:28px;">Naša ordinacija se nahaja v samem srcu Bleda — le minute hoje od ikoničnega jezera z otokom, Blejskega gradu in začetka Triglavskega narodnega parka. Mnogi naši pacienti iz Avstrije, Italije in celotne Evrope kombinirajo zobozdravstveni poseg z vikendom ali počitnicami v eni najlepših alpskih destinacij sveta.</p>
+        <div style="display:flex;gap:16px;flex-wrap:wrap;">
+          <a href="#narocanje" class="btn btn-primary" id="bled-section-booking-btn">Rezervirajte termin</a>
+          <a href="https://maps.google.com/?q=Bled+Slovenia" target="_blank" rel="noopener" class="btn btn-outline" id="bled-section-maps-btn" style="color:#fff;border-color:rgba(255,255,255,0.5);">Spoznajte Bled</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+     TEAM SECTION
+     ========================================== -->
+  <section class="section-padding" id="ekipa">
+    <div class="container">
+      <div class="text-center">
+        <span class="badge">Naši Strokovnjaki</span>
+        <h2 class="section-title">Ekipa, ki navdihuje zaupanje</h2>
+        <p class="section-subtitle">Vrhunski strokovnjaki in prijazno osebje, ki z ljubeznijo in najsodobnejšo opremo skrbijo za vaše udobje in zdravje.</p>
+      </div>
+
+      <div class="team-grid" id="team-grid-container">
+        <!-- DR. NINA ČELESNIK CARD -->
+        <div class="glass-panel team-card" id="team-card-nina">
+          <div class="team-avatar-container">
+            <div class="team-avatar-fallback">NČ</div>
+            <img class="team-avatar-img" src="assets/doctor_nina.png" alt="dr. Nina Čelesnik" onerror="this.style.opacity='0';">
+          </div>
+          <div class="team-name">dr. Nina Čelesnik, dr. dent. med.</div>
+          <div class="team-role">Vodja ordinacije / Zobozdravnica</div>
+          <div class="team-info">
+            <p class="team-bio">Hči ustanovitelja dr. Emila Čelesnika. Z več kot 20 leti izkušenj velja za eno vodilnih strokovnjakinj za estetsko prenovo zobnih lokov in specialistično protetiko. Redno sodeluje z evropskimi specialisti.</p>
+            <div class="team-bullets">
+              <div class="team-bullet">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Specializacija v fiksni protetiki in estetskih luskah (Veneers)</span>
+              </div>
+              <div class="team-bullet">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Članica Mednarodnega združenja za implantologijo (ITI)</span>
+              </div>
+              <div class="team-bullet">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Govori tekoče slovensko, angleško, nemško in italijansko</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MATJAŽ PLAVŠTAJNER CARD -->
+        <div class="glass-panel team-card" id="team-card-matjaz">
+          <div class="team-avatar-container">
+            <div class="team-avatar-fallback">MP</div>
+            <img class="team-avatar-img" src="assets/dentist_matjaz.jpg" alt="Matjaž Plavštajner" onerror="this.style.opacity='0';">
+          </div>
+          <div class="team-name">Matjaž Plavštajner, dr. dent. med.</div>
+          <div class="team-role">Zobozdravnik, endodontski specialist</div>
+          <div class="team-info">
+            <p class="team-bio">Strokovnjak za endodontijo (koreninska zdravljenja). Z izjemno natančnostjo pod zobozdravstvenim mikroskopom rešuje zobe, ki bi bili sicer predvideni za ekstrakcijo.</p>
+            <div class="team-bullets">
+              <div class="team-bullet">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Napredna endodontija pod mikroskopom</span>
+              </div>
+              <div class="team-bullet">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Strokovnjak za zahtevne rekonstrukcije zobnih kron</span>
+              </div>
+              <div class="team-bullet">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Aktivni član Slovenskega endodontskega združenja</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MIRKO POKLUKAR CARD -->
+        <div class="glass-panel team-card" id="team-card-mirko">
+          <div class="team-avatar-container">
+            <div class="team-avatar-fallback">MP</div>
+            <img class="team-avatar-img" src="assets/dentist_mirko.jpg" alt="Mirko Poklukar" onerror="this.style.opacity='0';">
+          </div>
+          <div class="team-name">Mirko Poklukar, dr. dent. med.</div>
+          <div class="team-role">Zobozdravnik, oralna kirurgija & vsadki</div>
+          <div class="team-info">
+            <p class="team-bio">Zobozdravnik z več kot 25 leti izkušenj na področju oralne kirurgije in implantologije. Specialist za zapletene kostne dograditve, sinus lift in takojšnje implantacije.</p>
+            <div class="team-bullets">
+              <div class="team-bullet">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Strokovnjak za napredne zobne vsadke (implantate)</span>
+              </div>
+              <div class="team-bullet">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Sinus lift posegi in rekonstrukcije kosti (Bio-Oss)</span>
+              </div>
+              <div class="team-bullet">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Minimalno invazivne kirurške metode</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NIK CARD -->
+        <div class="glass-panel team-card" id="team-card-nik">
+          <div class="team-avatar-container">
+            <div class="team-avatar-fallback">N</div>
+            <img class="team-avatar-img" src="assets/dentist_nik.jpg" alt="Nik, dr. dent. med." onerror="this.style.opacity='0';">
+          </div>
+          <div class="team-name">Nik, dr. dent. med.</div>
+          <div class="team-role">Zobozdravnik, estetska splošna oskrba</div>
+          <div class="team-info">
+            <p class="team-bio">Zobozdravnik, usmerjen v estetsko zobozdravstvo in minimalno invazivno splošno oskrbo. Mlad, izjemno natančen in izjemno priljubljen pri pacientih s strahom pred zobozdravniki.</p>
+            <div class="team-bullets">
+              <div class="team-bullet">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Estetske zalivke in nevidni aparati (Alignerji)</span>
+              </div>
+              <div class="team-bullet">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Preventiva in nežno čiščenje zobnega kamna</span>
+              </div>
+              <div class="team-bullet">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Specialist za delo s pacienti s strahom (odontofobija)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NATAŠA COLJA CARD -->
+        <div class="glass-panel team-card" id="team-card-natasa">
+          <div class="team-avatar-container">
+            <div class="team-avatar-fallback">NC</div>
+            <img class="team-avatar-img" src="assets/assistant_natasa.jpg" alt="Nataša Colja" onerror="this.style.opacity='0';">
+          </div>
+          <div class="team-name">Nataša Colja</div>
+          <div class="team-role">Zobozdravstvena asistentka</div>
+          <div class="team-info">
+            <p class="team-bio">Strokovna in predana asistentka z večletnimi izkušnjami pri asistiranju ob zahtevnih protetičnih posegih. Skrbi za sterilizacijo, higieno in maksimalno udobje pacientov.</p>
+            <div class="team-bullets">
+              <div class="team-bullet">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Asistenca pri zahtevnih estetskih in protetičnih posegih</span>
+              </div>
+              <div class="team-bullet">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Natančna skrb za popolno sterilizacijo in higienske protokole</span>
+              </div>
+              <div class="team-bullet">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Topel, skrben in empatičen sprejem pacientov v ordinaciji</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MATEJA NOVAK CARD -->
+        <div class="glass-panel team-card" id="team-card-mateja">
+          <div class="team-avatar-container">
+            <div class="team-avatar-fallback">MN</div>
+            <img class="team-avatar-img" src="assets/assistant_mateja.jpg" alt="Mateja Novak" onerror="this.style.opacity='0';">
+          </div>
+          <div class="team-name">Mateja Novak</div>
+          <div class="team-role">Zobozdravstvena asistentka</div>
+          <div class="team-info">
+            <p class="team-bio">Zanesljiva in izkušena asistentka, ki z visoko mero profesionalnosti in prijaznosti spremlja paciente skozi celoten proces obravnave. Skrbi za pripravo ordinacije in administrativno podporo.</p>
+            <div class="team-bullets">
+              <div class="team-bullet">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Priprava pacientov in asistiranje pri konzervativnem zdravljenju</span>
+              </div>
+              <div class="team-bullet">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Vodenje kartotek in administrativna koordinacija terminov</span>
+              </div>
+              <div class="team-bullet">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Skrb za dobro počutje ter sproščeno in brezstresno okolje</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+     GOOGLE REVIEWS (SOCIAL PROOF)
+     ========================================== -->
+  <section class="section-padding reviews-section" id="mnenja">
+    <div class="container">
+      <div class="text-center">
+        <span class="badge" style="background-color: rgba(255,255,255,0.1); color: var(--color-secondary);">Zaupajo nam</span>
+        <h2 class="section-title">Kaj o nas pravijo pacienti?</h2>
+        <p class="section-subtitle">Preberite pristna mnenja z našega Google Maps profila. Ponosni smo na večdesetletno zaupanje generacij.</p>
+      </div>
+
+      <div class="reviews-slider-container" id="google-reviews-slider-wrapper">
+        <!-- Slide 1 -->
+        <div class="review-slide active" id="review-slide-1">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Dr. Nina Čelesnik je čudovita! Estetika nasmeha je bila na prvem mestu, natančna in prijazna. Zobje so lepi in naravni. Resnično priporočam!"</p>
+          <div class="review-author">Mojca Z.</div>
+          <div class="review-source">Google Mnenje • Bled</div>
+        </div>
+        
+        <!-- Slide 2 -->
+        <div class="review-slide" id="review-slide-2">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Celotna ekipa je vrhunska. Zobozdravnica Nina mi je popolnoma brez bolečin popravila zobe, asistentka pa je opravila čiščenje zobnega kamna odlično in ugodno. Zelo priročno naročanje!"</p>
+          <div class="review-author">Janez K.</div>
+          <div class="review-source">Google Mnenje • Radovljica</div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="review-slide" id="review-slide-3">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Prihajam iz Avstrije že več kot 10 let. Dr. Emil in sedaj dr. Nina sta zame najboljša zobozdravnika. Vrhunska protetika in izjemno prijazno osebje, ki govori tekoče nemško."</p>
+          <div class="review-author">Hannelore W.</div>
+          <div class="review-source">Google Mnenje • Beljak (Villach)</div>
+        </div>
+      </div>
+
+      <div class="slider-nav" id="reviews-slider-nav-dots">
+        <button class="slider-dot active" aria-label="Prikaži mnenje 1"></button>
+        <button class="slider-dot" aria-label="Prikaži mnenje 2"></button>
+        <button class="slider-dot" aria-label="Prikaži mnenje 3"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+     BOOKING & CONTACT (HYBRID REQUEST FLOW)
+     ========================================== -->
+  <section class="section-padding" id="narocanje">
+    <div class="container booking-grid">
+      <!-- Booking Form Card -->
+      <div class="glass-panel booking-card" id="booking-request-card">
+        <div class="booking-form-header">
+          <h3>Varno povpraševanje za termin</h3>
+          <p>Izpolnite obrazec in naša recepcija bo takoj uskladila vašo željo z našim fizičnim koledarjem ter vas kontaktirala.</p>
+        </div>
+
+        <form id="booking-request-form" novalidate>
+          <div class="form-group-row">
+            <div class="form-group">
+              <label for="patient-name">Ime in Priimek *</label>
+              <input type="text" id="patient-name" class="form-input" placeholder="npr. Janez Novak" required>
+            </div>
+            <div class="form-group">
+              <label for="patient-phone">Telefonska Številka *</label>
+              <input type="tel" id="patient-phone" class="form-input" placeholder="npr. +386 41 123 456" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="patient-email">E-poštni naslov *</label>
+            <input type="email" id="patient-email" class="form-input" placeholder="npr. janez.novak@gmail.com" required>
+          </div>
+
+          <div class="form-group-row">
+            <div class="form-group">
+              <label for="dentist-type">Želeni nivo oskrbe *</label>
+              <select id="dentist-type" class="form-input" required>
+                <option value="specialist">Premium Oskrba (dr. Nina Čelesnik)</option>
+                <option value="general" selected>Splošna & Preventivna Oskrba</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="service-type">Želena storitev *</label>
+              <select id="service-type" class="form-input" required>
+                <option value="Pregled in posvet">Prvi pregled & posvet</option>
+                <option value="Zobne luske in estetika">Zobne luske / Estetika</option>
+                <option value="Zobna protetika">Zobna protetika (krona/mostiček)</option>
+                <option value="Implantati">Zobni implantati</option>
+                <option value="Čiščenje kamna">Čiščenje zobnega kamna & higiena</option>
+                <option value="Plombe in splošna oskrba">Bele zalivke & splošna popravila</option>
+                <option value="Nujna pomoč">Nujna pomoč / Bolečina</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Hybrid date selection - actual 1-hour time slots -->
+          <div class="form-group">
+            <label>Želeni termin (izberite datum in časovni termin) *</label>
+            <div class="slot-selection-box">
+              <div class="slot-row">
+                <input type="date" id="preferred-date-1" class="form-input" required>
+                <select id="preferred-time-1" class="form-input" required>
+                  <option value="08:00 – 09:00">08:00 – 09:00</option>
+                  <option value="09:00 – 10:00">09:00 – 10:00</option>
+                  <option value="10:00 – 11:00">10:00 – 11:00</option>
+                  <option value="11:00 – 12:00">11:00 – 12:00</option>
+                  <option value="12:00 – 13:00">12:00 – 13:00</option>
+                  <option value="13:00 – 14:00">13:00 – 14:00</option>
+                  <option value="14:00 – 15:00">14:00 – 15:00</option>
+                  <option value="15:00 – 16:00">15:00 – 16:00</option>
+                </select>
+              </div>
+              <div class="slot-row" style="margin-top: 10px;">
+                <input type="date" id="preferred-date-2" class="form-input">
+                <select id="preferred-time-2" class="form-input">
+                  <option value="">-- Druga možnost (neobvezno) --</option>
+                  <option value="08:00 – 09:00">08:00 – 09:00</option>
+                  <option value="09:00 – 10:00">09:00 – 10:00</option>
+                  <option value="10:00 – 11:00">10:00 – 11:00</option>
+                  <option value="11:00 – 12:00">11:00 – 12:00</option>
+                  <option value="12:00 – 13:00">12:00 – 13:00</option>
+                  <option value="13:00 – 14:00">13:00 – 14:00</option>
+                  <option value="14:00 – 15:00">14:00 – 15:00</option>
+                  <option value="15:00 – 16:00">15:00 – 16:00</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="patient-notes">Opombe, bolečine ali posebne želje</label>
+            <textarea id="patient-notes" class="form-input" rows="3" placeholder="Opišite vaše težave ali vprašanja..."></textarea>
+          </div>
+
+          <!-- Smart trust information banner explaining the paper schedule integration -->
+          <div class="info-banner" id="paper-calendar-info-widget">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-top: 2px;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+            <div>
+              <strong>Fizično zaščiten koledar:</strong> Ker želimo preprečiti neprijetna prekrivanja terminov in omogočiti nemoteno delo, se vaše spletno povpraševanje pošlje neposredno recepciji. Mi preverimo zasedenost v našem koledarju in vas pokličemo za potrditev.
+            </div>
+          </div>
+
+          <!-- Booking Commitment Fee Notice -->
+          <div class="booking-fee-notice-card" id="commitment-fee-notice-widget">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+            <div>
+              <div class="booking-fee-title">Varovalna rezervacijska pristojbina (30 €)</div>
+              <div class="booking-fee-desc">Za zagotovitev resnosti terminov se za vsako rezervacijo zaračuna simbolična varščina v višini 30 €. Ta znesek se ob obisku <strong>v celoti odšteje od storitve</strong> ali vrne. V primeru neprihoda brez odpovedi (vsaj 24h prej) se varščina zadrži.</div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1rem; margin-top: 15px;" id="submit-booking-request-btn">Pošljite povpraševanje za termin</button>
+        </form>
+      </div>
+
+      <!-- Contact Info Card -->
+      <div class="contact-panel" id="contact-details-panel">
+        <div class="glass-panel contact-card" id="contact-card-phone">
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </div>
+            <div class="contact-item-details">
+              <h4>Pokličite nas neposredno</h4>
+              <p>Za takojšnjo rezervacijo ali nujne primere nas lahko pokličete:</p>
+              <a href="tel:+38645750801" style="font-size: 1.25rem; font-weight: 600; color: var(--color-primary);" id="contact-phone-link">+386 (0)4 575 08 01</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-panel contact-card" id="contact-card-email">
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </div>
+            <div class="contact-item-details">
+              <h4>Pišite nam</h4>
+              <p>Odgovorimo vam v roku nekaj ur:</p>
+              <a href="mailto:des.celesnik@gmail.com" style="font-weight: 600;" id="contact-email-link">des.celesnik@gmail.com</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Google Maps Widget containing real link target to Nina's Maps listing -->
+        <div class="maps-widget" id="google-maps-widget-container">
+          <img src="assets/lake_bled_wellness.png" alt="Lokacija zobne klinike Čelesnik ob Blejskem jezeru" class="maps-placeholder-bg">
+          <div class="maps-widget-overlay">
+            <div class="maps-widget-title">Kje nas najdete?</div>
+            <div class="maps-widget-desc">Prešernova cesta 15, 4260 Bled. Nahajamo se na isti lokaciji z lastnim brezplačnim parkiriščem za paciente.</div>
+            <a href="https://maps.google.com/?q=Dentalno+estetski+studio+Nina+Celesnik+Bled" target="_blank" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.85rem;" id="maps-directions-external-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px; display: inline; vertical-align: middle;"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+              Navodila za pot
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+     SUCCESS POPUP MODAL
+     ========================================== -->
+  <div class="modal" id="booking-success-modal">
+    <div class="glass-panel modal-content" id="booking-modal-body">
+      <div class="modal-icon">✓</div>
+      <h3>Povpraševanje uspešno poslano!</h3>
+      <p>Hvala vam za zaupanje. Vaše podrobnosti smo prejeli. Naša recepcija bo zdaj preverila papirnati koledar za izbrana termina in vas v najkrajšem času poklicala ali vam poslala potrditveno e-pošto za dokončno uskladitev ter ureditev 30 € varovalne rezervacijske pristojbine (ki se vrne ob obisku ali odšteje od storitve). Prosimo vas, da dokončate pošiljanje e-pošte v vašem odprtem e-poštnem programu.</p>
+      <button class="btn btn-primary" style="width: 100%;" id="modal-close-btn">Zapri</button>
+    </div>
+  </div>
+
+  <!-- ==========================================
+     FOOTER
+     ========================================== -->
+  <footer class="site-footer" id="main-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand" id="footer-branding-column">
+        <a href="index.html" class="logo" style="margin-bottom: 20px;">
+          <img src="assets/logo.png" alt="Dentalno estetski studio Čelesnik" style="height: 85px; width: auto; object-fit: contain;" id="footer-logo-img">
+        </a>
+        <p class="footer-desc">Najdaljša tradicija zasebnega estetskega in splošnega zobozdravstva v Sloveniji, ki temelji na vrhunskem znanju in čutu za pacienta.</p>
+      </div>
+
+      <div id="footer-links-column">
+        <h4 class="footer-title">Povezave</h4>
+        <div class="footer-links">
+          <a href="#tradicija" class="footer-link">Naša Tradicija</a>
+          <a href="#storitve" class="footer-link">Raven Oskrbe</a>
+          <a href="#galerija" class="footer-link">Galerija del</a>
+          <a href="#ekipa" class="footer-link">Spoznajte Ekipo</a>
+          <a href="#mnenja" class="footer-link">Mnenja pacientov</a>
+          <a href="#narocanje" class="footer-link">Spletno Naročanje</a>
+        </div>
+      </div>
+
+      <div id="footer-hours-column">
+        <h4 class="footer-title">Delovni čas & Kontakt</h4>
+        <div class="footer-hours-row">
+          <span>Ponedeljek - Petek</span>
+          <span>08:00 - 16:00</span>
+        </div>
+        <div class="footer-hours-row" style="border: none;">
+          <span>Sobota, Nedelja & Prazniki</span>
+          <span>Zaprto (po dogovoru)</span>
+        </div>
+        <p style="margin-top: 20px; font-size: 0.9rem; color: var(--color-text-light);">
+          Prešernova cesta 15, 4260 Bled<br>
+          Telefon: +386 (0)4 575 08 01<br>
+          E-pošta: des.celesnik@gmail.com
+        </p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom" id="footer-terms-row">
+      <p>© 2026 Dentalno estetski studio Nina Čelesnik. Vse pravice pridržane.</p>
+      <p>Local SEO optimizacija • Bled, Slovenija</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>
