@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,6 +86,9 @@
       </nav>
       
       <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+          <span class="theme-icon">🌙</span>
+        </button>
         <!-- Language Switcher Redirection supporting all 4 languages -->
         <div class="lang-switcher" id="language-switcher-widget">
           <a href="index.html" class="lang-btn" id="lang-sl-btn">SL</a>
@@ -130,7 +133,7 @@
   <!-- ==========================================
      STATISTICS BAR
      ========================================== -->
-  <section class="stats-bar" id="clinic-stats-bar">
+  <section class="stats-bar scroll-animate" id="clinic-stats-bar">
     <div class="container">
       <div class="glass-panel stats-grid" id="stats-grid-container">
         <div class="stat-item" id="stat-item-years">
@@ -158,7 +161,7 @@
      ========================================== -->
   <section class="section-padding" id="tradicija">
     <div class="container concept-grid">
-      <div class="concept-img-wrapper" id="concept-visual-wrapper">
+      <div class="concept-img-wrapper scroll-animate-left" id="concept-visual-wrapper">
         <img src="assets/gallery_3.webp" alt="Präzise zahnärztliche Arbeit von dr. Nina Čelesnik" class="concept-img" id="concept-primary-image">
         <div class="concept-badge" id="concept-badge-widget">
           <div class="concept-badge-title">dr. Nina Čelesnik</div>
@@ -166,8 +169,8 @@
         </div>
       </div>
       
-      <div class="concept-text" id="concept-text-container">
-        <span class="badge">Geschichte & Vermächtnis</span>
+      <div class="concept-text scroll-animate-right" id="concept-text-container">
+        <span class="badge scroll-animate scroll-delay-1">Geschichte & Vermächtnis</span>
         <h2>Über 50 Jahre Hingabe zur Perfektion</h2>
         <p>Unser Studio blickt auf die längste private zahnärztliche Tradition in Slowenien zurück. Gegründet wurde es von dr. Emil Čelesnik, der die ersten fortschrittlichen Techniken des ästhetischen Porzellans in unseren Raum brachte und den Grundstein für die moderne ästhetische Zahnmedizin legte. Dr. Emil suchte nicht nur nach Funktionalität – er strebte nach vollkommener Ästhetik, nach Zähnen, die nicht nur gesund, sondern wahrhaft schön sind. Seine legendären Meisterwerke — wie die außergewöhnliche Rekonstruktion eines menschlichen Schädels für den Kongress in Belgrad 1986 und die berühmten goldenen Schlangen-Porzellan-Zähne, die 1989 in Nürnberg präsentiert wurden — verblüfften die internationale Fachwelt mit einer unglaublich getreuen Nachbildung natürlicher Zähne und höchster Präzision.</p>
         
@@ -188,13 +191,13 @@
     <div class="container">
       <div class="text-center">
         <span class="badge" id="services-badge">Individuelle Lösungen</span>
-        <h2 class="section-title">Wählen Sie das passende Versorgungsniveau</h2>
-        <p class="section-subtitle">Wir haben zwei separate Versorgungsstufen eingerichtet, die jedem Patienten Sicherheit, Schnelligkeit und eine transparente Zugänglichkeit garantieren.</p>
+        <h2 class="section-title scroll-animate">Wählen Sie das passende Versorgungsniveau</h2>
+        <p class="section-subtitle scroll-animate scroll-delay-1">Wir haben zwei separate Versorgungsstufen eingerichtet, die jedem Patienten Sicherheit, Schnelligkeit und eine transparente Zugänglichkeit garantieren.</p>
       </div>
 
       <div class="services-tier-container" id="services-funnel-container">
         <!-- TIER 1: ELITE & AESTHETIC CARE (dr. Nina Čelesnik) -->
-        <div class="glass-panel service-tier-card" style="border-top: 4px solid var(--color-secondary);" id="service-tier-elite">
+        <div class="glass-panel service-tier-card scroll-animate scroll-delay-1" style="border-top: 4px solid var(--color-secondary);" id="service-tier-elite">
           <div class="tier-header">
             <div class="tier-title-container">
               <h3 class="tier-title">Premium- & ästhetische Pflege</h3>
@@ -234,7 +237,7 @@
         </div>
 
         <!-- TIER 2: GENERAL & GENERAL FAMILY CARE -->
-        <div class="glass-panel service-tier-card" style="border-top: 4px solid var(--color-primary);" id="service-tier-general">
+        <div class="glass-panel service-tier-card scroll-animate scroll-delay-2" style="border-top: 4px solid var(--color-primary);" id="service-tier-general">
           <div class="tier-header">
             <div class="tier-title-container">
               <h3 class="tier-title">Allgemeine & präventive Zahnmedizin</h3>
@@ -286,14 +289,14 @@
   <section class="section-padding" style="background-color: rgba(28, 41, 54, 0.02); border-top: 1px solid var(--color-glass-border); border-bottom: 1px solid var(--color-glass-border);" id="galerija">
     <div class="container">
       <div class="text-center">
-        <span class="badge">Bildergalerie</span>
-        <h2 class="section-title">Eindrücke aus unserem Studio</h2>
-        <p class="section-subtitle">Sehen Sie unsere modernen Behandlungsräume in Bled und die exzellenten Ergebnisse unserer ästhetischen Zahnmedizin.</p>
+        <span class="badge scroll-animate scroll-delay-1">Bildergalerie</span>
+        <h2 class="section-title scroll-animate">Eindrücke aus unserem Studio</h2>
+        <p class="section-subtitle scroll-animate scroll-delay-1">Sehen Sie unsere modernen Behandlungsräume in Bled und die exzellenten Ergebnisse unserer ästhetischen Zahnmedizin.</p>
       </div>
 
       <div class="gallery-grid" id="clinic-gallery-container">
         <!-- Gallery Item 1 -->
-        <div class="gallery-item">
+        <div class="gallery-item scroll-animate scroll-delay-1">
           <img src="assets/gallery_1.webp" alt="Modernes Behandlungszimmer" loading="lazy">
           <div class="gallery-overlay-hover">
             <span class="gallery-tag">Ordination</span>
@@ -301,7 +304,7 @@
           </div>
         </div>
         <!-- Gallery Item 2 -->
-        <div class="gallery-item">
+        <div class="gallery-item scroll-animate scroll-delay-2">
           <img src="assets/gallery_2.webp" alt="Premium Ästhetik-Prothetik" loading="lazy">
           <div class="gallery-overlay-hover">
             <span class="gallery-tag">Ästhetik</span>
@@ -309,7 +312,7 @@
           </div>
         </div>
         <!-- Gallery Item 3 -->
-        <div class="gallery-item">
+        <div class="gallery-item scroll-animate scroll-delay-3">
           <img src="assets/gallery_3.webp" alt="Präzisionsarbeit von dr. Nina Čelesnik" loading="lazy">
           <div class="gallery-overlay-hover">
             <span class="gallery-tag">Spezialbehandlung</span>
@@ -317,7 +320,7 @@
           </div>
         </div>
         <!-- Gallery Item 4 -->
-        <div class="gallery-item">
+        <div class="gallery-item scroll-animate scroll-delay-4">
           <img src="assets/gallery_4.webp" alt="Komplette Lächeln-Rekonstruktion" loading="lazy">
           <div class="gallery-overlay-hover">
             <span class="gallery-tag">Lächeln</span>
@@ -325,7 +328,7 @@
           </div>
         </div>
         <!-- Gallery Item 5 -->
-        <div class="gallery-item">
+        <div class="gallery-item scroll-animate scroll-delay-5">
           <img src="assets/gallery_5.webp" alt="Komfort & Wohlbefinden" loading="lazy">
           <div class="gallery-overlay-hover">
             <span class="gallery-tag">Ambiente</span>
@@ -333,7 +336,7 @@
           </div>
         </div>
         <!-- Gallery Item 6 -->
-        <div class="gallery-item">
+        <div class="gallery-item scroll-animate scroll-delay-6">
           <img src="assets/hero_smile.webp" alt="Ein strahlend gesundes Lächeln" loading="lazy">
           <div class="gallery-overlay-hover">
             <span class="gallery-tag">Ergebnis</span>
@@ -371,14 +374,14 @@
   <section class="section-padding" id="ekipa">
     <div class="container">
       <div class="text-center">
-        <span class="badge">Unsere Spezialisten</span>
-        <h2 class="section-title">Ein Team, das Vertrauen einflößt</h2>
-        <p class="section-subtitle">Erfahrene Spezialisten und freundliches Personal sorgen mit viel Liebe und modernster Ausstattung für Ihren Komfort und Ihre Gesundheit.</p>
+        <span class="badge scroll-animate scroll-delay-1">Unsere Spezialisten</span>
+        <h2 class="section-title scroll-animate">Ein Team, das Vertrauen einflößt</h2>
+        <p class="section-subtitle scroll-animate scroll-delay-1">Erfahrene Spezialisten und freundliches Personal sorgen mit viel Liebe und modernster Ausstattung für Ihren Komfort und Ihre Gesundheit.</p>
       </div>
 
       <div class="team-grid" id="team-grid-container">
         <!-- DR. NINA ČELESNIK CARD -->
-        <div class="glass-panel team-card" id="team-card-nina">
+        <div class="glass-panel team-card" id="team-card-nina" class="scroll-animate scroll-delay-1">
           <div class="team-avatar-container">
             <div class="team-avatar-fallback">NČ</div>
             <img class="team-avatar-img" src="assets/doctor_nina.png" alt="dr. Nina Čelesnik" onerror="this.style.opacity='0';">
@@ -405,7 +408,7 @@
         </div>
 
         <!-- MATJAŽ PLAVŠTAJNER CARD -->
-        <div class="glass-panel team-card" id="team-card-matjaz">
+        <div class="glass-panel team-card" id="team-card-matjaz" class="scroll-animate scroll-delay-2">
           <div class="team-avatar-container">
             <div class="team-avatar-fallback">MP</div>
             <!-- assets/dentist_matjaz.jpg removed -->
@@ -432,7 +435,7 @@
         </div>
 
         <!-- MIRKO POKLUKAR CARD -->
-        <div class="glass-panel team-card" id="team-card-mirko">
+        <div class="glass-panel team-card" id="team-card-mirko" class="scroll-animate scroll-delay-3">
           <div class="team-avatar-container">
             <div class="team-avatar-fallback">MP</div>
             <!-- assets/dentist_mirko.jpg removed -->
@@ -459,7 +462,7 @@
         </div>
 
         <!-- NIK CARD -->
-        <div class="glass-panel team-card" id="team-card-nik">
+        <div class="glass-panel team-card" id="team-card-nik" class="scroll-animate scroll-delay-4">
           <div class="team-avatar-container">
             <div class="team-avatar-fallback">N</div>
             <!-- assets/dentist_nik.jpg removed -->
@@ -486,7 +489,7 @@
         </div>
 
         <!-- NATAŠA COLJA CARD -->
-        <div class="glass-panel team-card" id="team-card-natasa">
+        <div class="glass-panel team-card" id="team-card-natasa" class="scroll-animate scroll-delay-5">
           <div class="team-avatar-container">
             <div class="team-avatar-fallback">NC</div>
             <img class="team-avatar-img" src="assets/assistant_natasa.jpg" alt="Nataša Colja" onerror="this.style.opacity='0';">
@@ -513,7 +516,7 @@
         </div>
 
         <!-- MATEJA NOVAK CARD -->
-        <div class="glass-panel team-card" id="team-card-mateja">
+        <div class="glass-panel team-card" id="team-card-mateja" class="scroll-animate scroll-delay-6">
           <div class="team-avatar-container">
             <div class="team-avatar-fallback">MN</div>
             <img class="team-avatar-img" src="assets/assistant_mateja.jpg" alt="Mateja Novak" onerror="this.style.opacity='0';">
@@ -549,13 +552,13 @@
     <div class="container">
       <div class="text-center">
         <span class="badge" style="background-color: rgba(255,255,255,0.1); color: var(--color-secondary);">Zufriedenheit</span>
-        <h2 class="section-title">Was sagen unsere Patienten?</h2>
-        <p class="section-subtitle">Authentische Rezensionen aus unserem Google Business Profile. Wir danken unseren Patienten für ihr jahrelanges Vertrauen.</p>
+        <h2 class="section-title scroll-animate">Was sagen unsere Patienten?</h2>
+        <p class="section-subtitle scroll-animate scroll-delay-1">Authentische Rezensionen aus unserem Google Business Profile. Wir danken unseren Patienten für ihr jahrelanges Vertrauen.</p>
       </div>
 
       <div class="reviews-slider-container" id="google-reviews-slider-wrapper">
         <!-- Slide 1 -->
-        <div class="review-slide active" id="review-slide-1">
+        <div class="review-slide active scroll-animate" id="review-slide-1">
           <div class="review-stars">★★★★★</div>
           <p class="review-text">"Dr. Nina Čelesnik ist einfach fantastisch! Die Ästhetik des Lächelns stand an erster Stelle, äußerst präzise und einfühlsam. Die Zähne sind wunderschön und natürlich geworden. Sehr zu empfehlen!"</p>
           <div class="review-author">Mojca Z.</div>
@@ -563,7 +566,7 @@
         </div>
         
         <!-- Slide 2 -->
-        <div class="review-slide" id="review-slide-2">
+        <div class="review-slide scroll-animate scroll-delay-2" id="review-slide-2">
           <div class="review-stars">★★★★★</div>
           <p class="review-text">"Das gesamte Team ist erstklassig. Die zahnärztliche Behandlung war absolut schmerzfrei, und die professionelle Prophylaxe war gründlich und sehr preisgünstig. Sehr bequeme Online-Terminanfrage!"</p>
           <div class="review-author">Janez K.</div>
@@ -571,7 +574,7 @@
         </div>
 
         <!-- Slide 3 -->
-        <div class="review-slide" id="review-slide-3">
+        <div class="review-slide scroll-animate scroll-delay-3" id="review-slide-3">
           <div class="review-stars">★★★★★</div>
           <p class="review-text">"Ich reise seit über 10 Jahren aus Kärnten an. Dr. Emil und nun seine Tochter dr. Nina sind für mich die absolut besten Zahnärzte. Top Prothetik und extrem freundliches, deutschsprachiges Personal!"</p>
           <div class="review-author">Hannelore W.</div>
@@ -691,7 +694,7 @@
       </div>
 
       <!-- Contact Info Card -->
-      <div class="contact-panel" id="contact-details-panel">
+      <div class="contact-panel scroll-animate-right" id="contact-details-panel">
         <div class="glass-panel contact-card" id="contact-card-phone">
           <div class="contact-item">
             <div class="contact-item-icon">
