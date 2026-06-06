@@ -48,6 +48,16 @@ function initHeaderScroll() {
 
   window.addEventListener('scroll', handleScroll, { passive: true });
   handleScroll();
+
+  // Mobile nav toggle
+  const toggle = document.getElementById('nav-toggle');
+  const menu = document.getElementById('header-navigation-menu');
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+  }
 }
 
 /* ==========================================
@@ -322,14 +332,11 @@ Možnost 2: ${date2} ob ${time2}
 --- OPOMBE PACIENTA ---
 ${note}
 
---- REZERVACIJSKA PRISTOJBINA (Commitment Fee) ---
-Pacient je seznanjen z varovalno rezervacijsko pristojbino v višini 30 € (ki se vrne ob obisku oz. odšteje od končne storitve). Prosimo, uskladite plačilo varščine ob potrditvi termina.
-
 --------------------------------------
 Navodila za recepcijo:
 1. Preverite papirni koledar za izbrana termina.
 2. Vpišite pacienta v prosti termin.
-3. Pokličite pacienta na ${phone} ali odgovorite na to e-pošto za končno potrditev in ureditev varščine (30 €).
+3. Pokličite pacienta na ${phone} ali odgovorite na to e-pošto za končno potrditev.
 `;
 
     // Construct Mailto Link
