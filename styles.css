@@ -1847,10 +1847,6 @@ button, input, select, textarea {
   50% { transform: translateY(-6px); }
 }
 
-.music-control.playing {
-  animation: float 3s ease-in-out infinite;
-}
-
 /* Pulse animation for CTA buttons */
 @keyframes pulse-glow {
   0%, 100% { box-shadow: 0 0 0 0 rgba(158, 142, 112, 0.4); }
