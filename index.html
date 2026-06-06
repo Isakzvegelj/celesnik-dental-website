@@ -137,32 +137,23 @@
 
 <!-- Hero section -->
    <section class="hero" id="home-hero" aria-label="Dental studio hero banner">
-     <picture>
-       <source srcset="assets/hero_smile.webp" type="image/webp">
-       <img src="assets/hero_smile.webp" alt="Zdrav in čudovit estetski nasmeh" class="hero-video-bg" id="hero-background-media" width="1920" height="1080" fetchpriority="high">
-     </picture>
+     <video class="hero-video-bg" autoplay muted loop playsinline poster="assets/hero_smile.webp">
+       <source src="assets/hero_video.mp4" type="video/mp4">
+       <source src="assets/hero_smile.webp" type="image/webp">
+     </video>
      <div class="hero-overlay" aria-hidden="true"></div>
     
     <div class="container">
       <div class="hero-content">
-        <span class="badge" id="hero-badge-tag">Dolgoletna družinska tradicija</span>
-        <h1>Ustvarjamo nasmehe, ki trajajo <span>generacije</span>.</h1>
-        <p class="hero-desc">Estetika in zdravje v srcu Bleda. Dr. Nina Čelesnik in njena ekipa se zavzemata, da so vaši zobje ne le zdravi, ampak resnično lepi — vaš nasmeh je umetnost.</p>
-        <div class="hero-buttons">
+        <span class="badge scroll-animate scroll-delay-1" id="hero-badge-tag">Dolgoletna družinska tradicija</span>
+        <h1 class="scroll-animate scroll-delay-2">Ustvarjamo nasmehe, ki trajajo <span>generacije</span>.</h1>
+        <p class="hero-desc scroll-animate scroll-delay-3">Estetika in zdravje v srcu Bleda. Dr. Nina Čelesnik in njena ekipa se zavzemata, da so vaši zobje ne le zdravi, ampak resnično lepi — vaš nasmeh je umetnost.</p>
+        <div class="hero-buttons scroll-animate scroll-delay-4">
           <a href="#narocanje" class="btn btn-primary" id="hero-primary-cta-btn">Rezervirajte termin</a>
           <a href="#storitve" class="btn btn-outline hero-btn-alt" id="hero-secondary-cta-btn">Spoznajte storitve</a>
         </div>
       </div>
     </div>
-
-    <!-- Audio toggle (Ambient procedural spa music player) -->
-    <button class="music-control" aria-label="Predvajaj sproščujočo glasbo v ozadju" id="ambient-audio-toggle-btn">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-        <line x1="23" y1="9" x2="17" y2="15"></line>
-        <line x1="17" y1="9" x2="23" y2="15"></line>
-      </svg>
-    </button>
   </section>
 
 <!-- Statistics Bar -->
