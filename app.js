@@ -26,7 +26,139 @@ document.addEventListener('DOMContentLoaded', () => {
   initBeforeAfterSlider();
   initThemeToggle();
   initScrollAnimations();
+  initAmbientAudio();
 });
+
+/* ==========================================
+   Ambient Procedural Spa Music (Web Audio API)
+   Soft drone pad -- no external files needed
+   ========================================== */
+function initAmbientAudio() {
+  let audioCtx = null;
+  let oscillators = [];
+  let gains = [];
+  let masterGain = null;
+  let isPlaying = false;
+  let isInitialized = false;
+
+  // Frequencies for a relaxing C major 7th pad
+  const NOTES = [
+    { freq: 130.81, amp: 0.08 },  // C3
+    { freq: 196.00, amp: 0.06 },  // G3
+    { freq: 261.63, amp: 0.05 },  // C4
+    { freq: 329.63, amp: 0.04 },  // E4
+    { freq: 392.00, amp: 0.03 },  // G4
+  ];
+
+  function createOscillator(ctx, freq, amp) {
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(freq, ctx.currentTime);
+
+    // Very slow random vibrato for organic feel
+    const lfo = ctx.createOscillator();
+    const lfoGain = ctx.createGain();
+    lfo.frequency.setValueAtTime(0.1 + Math.random() * 0.2, ctx.currentTime);
+    lfoGain.gain.setValueAtTime(freq * 0.003, ctx.currentTime);
+    lfo.connect(lfoGain);
+    lfoGain.connect(osc.frequency);
+    lfo.start();
+
+    gain.gain.setValueAtTime(0, ctx.currentTime);
+    gain.gain.linearRampToValueAtTime(amp, ctx.currentTime + 3); // 3s fade in
+
+    osc.connect(gain);
+    gain.connect(masterGain);
+    osc.start();
+
+    oscillators.push(osc);
+    oscillators.push(lfo);
+    gains.push(gain);
+  }
+
+  function startAudio() {
+    if (isPlaying) return;
+    try {
+      const AudioContext = window.AudioContext || window.webkitAudioContext;
+      audioCtx = new AudioContext();
+      masterGain = audioCtx.createGain();
+      masterGain.gain.setValueAtTime(0.6, audioCtx.currentTime);
+      masterGain.connect(audioCtx.destination);
+
+      NOTES.forEach(n => createOscillator(audioCtx, n.freq, n.amp));
+      isPlaying = true;
+    } catch (e) {
+      console.warn('Audio not supported:', e);
+    }
+  }
+
+  function stopAudio() {
+    if (!isPlaying || !audioCtx) return;
+    try {
+      const now = audioCtx.currentTime;
+      gains.forEach(g => {
+        g.gain.linearRampToValueAtTime(0, now + 2);
+      });
+      setTimeout(() => {
+        oscillators.forEach(o => { try { o.stop(); } catch(e){} });
+        if (audioCtx) audioCtx.close();
+        oscillators = [];
+        gains = [];
+        audioCtx = null;
+        masterGain = null;
+        isPlaying = false;
+      }, 2500);
+    } catch (e) {}
+  }
+
+  // Auto-start audio on first user interaction (browser policy)
+  function tryAutoStart() {
+    if (isInitialized) return;
+    isInitialized = true;
+    startAudio();
+    if (toggleBtn) {
+      toggleBtn.classList.add('playing');
+      updateBtnState();
+    }
+  }
+
+  // Create floating music toggle button
+  const toggleBtn = document.createElement('button');
+  toggleBtn.id = 'ambient-music-toggle';
+  toggleBtn.className = 'music-control';
+  toggleBtn.setAttribute('aria-label', 'Toggle background music');
+  toggleBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>`;
+
+  function updateBtnState() {
+    if (!toggleBtn) return;
+    if (isPlaying) {
+      toggleBtn.classList.add('playing');
+      toggleBtn.setAttribute('aria-label', 'Stop background music');
+    } else {
+      toggleBtn.classList.remove('playing');
+      toggleBtn.setAttribute('aria-label', 'Play background music');
+    }
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    if (isPlaying) {
+      stopAudio();
+    } else {
+      startAudio();
+    }
+    updateBtnState();
+  });
+
+  // Append to page
+  document.body.appendChild(toggleBtn);
+
+  // Auto-start on first interaction
+  ['click', 'touchstart', 'keydown', 'scroll'].forEach(evt => {
+    window.addEventListener(evt, tryAutoStart, { once: false, passive: true });
+  });
+}
 
 /* ==========================================
     Header Scroll Behavior - Performance Optimized
