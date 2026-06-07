@@ -65,6 +65,7 @@
   </script>
 </head>
 <body>
+  <a href="#main-content" id="skip-to-content" style="position:absolute;top:-40px;left:0;background:var(--color-primary);color:#fff;padding:8px 16px;z-index:10000;transition:top 0.3s">Skip to main content</a>
 
   <!-- ==========================================
      NAVIGATION HEADER
@@ -108,9 +109,12 @@
   <!-- ==========================================
      HERO SECTION
      ========================================== -->
-  <section class="hero" id="home-hero">
-    <img src="assets/hero_smile.webp" alt="Healthy and beautiful aesthetic smile" class="hero-video-bg" id="hero-background-media">
-    <div class="hero-overlay"></div>
+  <section class="hero" id="home-hero" aria-label="Dental studio hero banner">
+    <video class="hero-video-bg" autoplay muted loop playsinline poster="assets/hero_smile.webp">
+      <source src="assets/hero_video.mp4" type="video/mp4">
+      <source src="assets/hero_smile.webp" type="image/webp">
+    </video>
+    <div class="hero-overlay" aria-hidden="true"></div>
     
     <div class="container">
       <div class="hero-content">
@@ -151,6 +155,9 @@
       </div>
     </div>
   </section>
+
+  <!-- Main content for skip link -->
+  <main id="main-content">
 
   <!-- ==========================================
      CLINIC HISTORY / CONCEPT SECTION
@@ -738,10 +745,12 @@
     <div class="glass-panel modal-content" id="booking-modal-body">
       <div class="modal-icon">✓</div>
       <h3>Request Successfully Sent!</h3>
-      <p>Thank you for your trust. We have received your details. Our reception will now check the paper calendar and contact you shortly to finalize the appointment (refunded upon attendance or deducted from your treatment). Please complete sending the email in your open email client.</p>
-      <button class="btn btn-primary" style="width: 100%;" id="modal-close-btn" aria-label="Zapri">Close</button>
+      <p>Thank you for your trust. We have received your details. Our reception will now check the paper calendar and contact you shortly to finalize the appointment. Please complete sending the email in your open email client.</p>
+      <button class="btn btn-primary" style="width: 100%;" id="modal-close-btn" aria-label="Close">Close</button>
     </div>
   </div>
+
+  </main>
 
   <!-- ==========================================
      FOOTER

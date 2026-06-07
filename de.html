@@ -70,6 +70,7 @@
   </script>
 </head>
 <body>
+  <a href="#main-content" id="skip-to-content" style="position:absolute;top:-40px;left:0;background:var(--color-primary);color:#fff;padding:8px 16px;z-index:10000;transition:top 0.3s">Zum Hauptinhalt springen</a>
 
   <!-- ==========================================
      NAVIGATION HEADER
@@ -114,9 +115,12 @@
   <!-- ==========================================
      HERO SECTION
      ========================================== -->
-  <section class="hero" id="home-hero">
-    <img src="assets/hero_smile.webp" alt="Schönes und gesundes ästhetisches Lächeln" class="hero-video-bg" id="hero-background-media">
-    <div class="hero-overlay"></div>
+  <section class="hero" id="home-hero" aria-label="Dental studio hero banner">
+    <video class="hero-video-bg" autoplay muted loop playsinline poster="assets/hero_smile.webp">
+      <source src="assets/hero_video.mp4" type="video/mp4">
+      <source src="assets/hero_smile.webp" type="image/webp">
+    </video>
+    <div class="hero-overlay" aria-hidden="true"></div>
     
     <div class="container">
       <div class="hero-content">
@@ -157,6 +161,9 @@
       </div>
     </div>
   </section>
+
+  <!-- Main content for skip link -->
+  <main id="main-content">
 
   <!-- ==========================================
      CLINIC HISTORY / CONCEPT SECTION
@@ -745,9 +752,11 @@
       <div class="modal-icon">✓</div>
       <h3>Anfrage erfolgreich gesendet!</h3>
       <p>Vielen Dank für Ihr Vertrauen. Wir haben Ihre Daten erhalten. Unsere Rezeption wird nun den physischen Papierkalender prüfen, um Terminüberschneidungen zu vermeiden, und sich in Kürze mit Ihnen in Verbindung setzen (per Anruf oder E-Mail), um den Termin endgültig abzustimmen. Bitte schließen Sie den E-Mail-Versand in Ihrem E-Mail-Programm ab.</p>
-      <button class="btn btn-primary" style="width: 100%;" id="modal-close-btn" aria-label="Zapri">Schließen</button>
+      <button class="btn btn-primary" style="width: 100%;" id="modal-close-btn" aria-label="Schließen">Schließen</button>
     </div>
   </div>
+
+  </main>
 
   <!-- ==========================================
      FOOTER
