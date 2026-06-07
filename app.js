@@ -30,6 +30,56 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ==========================================
+   Theme Toggle
+   ========================================== */
+function initThemeToggle() {
+  const toggle = document.getElementById('theme-toggle');
+  if (!toggle) return;
+
+  // Apply saved theme
+  const savedTheme = localStorage.getItem('theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+
+  toggle.addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+  });
+}
+
+/* ==========================================
+   Scroll Animations Trigger
+   ========================================== */
+function initScrollAnimations() {
+  const elements = document.querySelectorAll('.scroll-animate, .scroll-animate-left, .scroll-animate-right');
+  if (elements.length === 0) return;
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animated');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    elements.forEach(el => observer.observe(el));
+  } else {
+    elements.forEach(el => el.classList.add('animated'));
+  }
+}
+
+/* ==========================================
+   Before/After Slider (placeholder for future use)
+   ========================================== */
+function initBeforeAfterSlider() {
+  // Placeholder for before/after comparison slider
+  // Currently not implemented - no elements on page
+}
+
+/* ==========================================
    Ambient Procedural Spa Music (Web Audio API)
    Soft drone pad -- no external files needed
    ========================================== */
