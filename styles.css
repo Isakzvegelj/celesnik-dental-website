@@ -719,11 +719,15 @@ button, input, select, textarea {
 #header-logo-img {
   height: 75px !important;
   transition: var(--transition-smooth);
-  filter: brightness(0) invert(1); /* White on dark header */
 }
+/* Before scroll: dark header bg, so logo must be white */
+.site-header:not(.scrolled) #header-logo-img {
+  filter: brightness(0) invert(1);
+}
+/* After scroll: white header bg, so logo goes back to normal dark */
 .site-header.scrolled #header-logo-img {
   height: 58px !important;
-  filter: none; /* Normal black on white scrolled header */
+  filter: none !important;
 }
 
 /* ==========================================
