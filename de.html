@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
+  <!-- Preconnect for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <!-- Premium SEO Meta Tags für den deutschsprachigen Raum -->
   <title>Zahnarzt Bled Slowenien | Dentalno estetski studio dr. Nina Čelesnik</title>
   <meta name="description" content="Exzellente ästhetische Zahnheilkunde, Veneers, Zahnimplantate und günstige zahnärztliche Grundversorgung in Bled, Slowenien. Über 50 Jahre Familientradition. Buchen Sie Ihren Termin!">
@@ -12,11 +16,12 @@
   <!-- Open Graph -->
   <meta property="og:title" content="Zahnarzt Bled Slowenien | Dentalno estetski studio dr. Nina Čelesnik">
   <meta property="og:description" content="Exzellente Zahnästhetik und liebevolle Pflege in Bled mit über 50-jähriger Familientradition. Erfahren Sie mehr über unsere günstige Zahnversorgung.">
-  <meta property="og:image" content="assets/hero_smile.webp">
+  <meta property="og:image" content="https://isakzvegelj.github.io/celesnik-dental-website/assets/hero_smile.webp">
   <meta property="og:type" content="website">
   
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="styles.css"></noscript>
   
   <!-- High-fidelity gold monogram favicon -->
   <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23121c26%22/><text y=%2272%22 x=%2225%22 font-family=%22serif%22 font-size=%2265%22 font-weight=%22bold%22 fill=%22%239e8e70%22>Č</text></svg>">
@@ -75,6 +80,11 @@
         <img src="assets/logo.png" alt="Dentalno estetski studio Čelesnik" style="width: auto; object-fit: contain;" id="header-logo-img">
       </a>
       
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menü öffnen">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <nav class="nav-menu" id="header-navigation-menu">
         <a href="#tradicija" class="nav-link" id="nav-link-tradition">Tradition</a>
         <a href="#storitve" class="nav-link" id="nav-link-services">Behandlungen</a>
@@ -337,12 +347,10 @@
         </div>
       </div>
 
-      
-
   <!-- ==========================================
      LAKE BLED DESTINATION SECTION
      ========================================== -->
-    </section>
+  </section>
 
   <section id="bled" style="position:relative; overflow:hidden; min-height: 220px; display:flex; align-items:center; padding-top: 12px; padding-bottom: 12px;">
     <img src="assets/lake_bled_wellness.webp" alt="Blejer See" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0;">
@@ -786,8 +794,8 @@
 
     <div class="container footer-bottom" id="footer-terms-row">
       <p>© 2026 Dentalno estetski studio Nina Čelesnik. Alle Rechte vorbehalten.</p>
-      <p>Local SEO Optimierung • Bled, Slowenien</p>
-     | <a href="privacy_de.html" style="color: var(--color-secondary);">Datenschutz & AGB</a></div>
+      <p><a href="#" style="color: var(--color-secondary);">Datenschutz & AGB</a> • Bled, Slowenien</p>
+    </div>
   </footer>
 
   <!-- Scripts -->

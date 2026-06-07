@@ -229,6 +229,8 @@ button, input, select, textarea {
   display: flex;
   align-items: center;
   gap: 12px;
+  padding-top: 4px;
+  padding-bottom: 2px;
 }
 
 .logo-icon {
@@ -717,7 +719,8 @@ button, input, select, textarea {
 
 /* Logo Sizing and Transitions */
 #header-logo-img {
-  height: 75px !important;
+  height: 65px !important;
+  padding-bottom: 6px;
   transition: var(--transition-smooth);
 }
 /* Before scroll: dark header bg, so logo must be white */

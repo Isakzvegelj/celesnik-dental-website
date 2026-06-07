@@ -3,20 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
+  <!-- Preconnect for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <!-- Premium SEO Meta Tags for English Markets -->
   <title>Dentist Bled Slovenia | Dental Studio dr. Nina Čelesnik</title>
   <meta name="description" content="Premium aesthetic dentistry, veneers, dental implants and affordable general care in Bled, Slovenia. Over 50 years of family tradition. Book your appointment!">
   <meta name="keywords" content="Dentist Bled, Dentist Slovenia, Dental Clinic Bled, Veneers Slovenia, Dental Implants Bled, Cheap Dentist Slovenia, Teeth cleaning Bled, dr. Nina Čelesnik">
-  
+
   <!-- Open Graph -->
   <meta property="og:title" content="Dentist Bled Slovenia | Dental Studio dr. Nina Čelesnik">
   <meta property="og:description" content="Premium aesthetic dentistry and quality dental care in Bled with over 50 years of tradition. Discover our team for affordable general dental care.">
-  <meta property="og:image" content="assets/hero_smile.webp">
+  <meta property="og:image" content="https://isakzvegelj.github.io/celesnik-dental-website/assets/hero_smile.webp">
   <meta property="og:type" content="website">
-  
+
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="styles.css"></noscript>
   <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23121c26%22/><text y=%2272%22 x=%2225%22 font-family=%22serif%22 font-size=%2265%22 font-weight=%22bold%22 fill=%22%239e8e70%22>Č</text></svg>">
 
   <!-- JSON-LD LocalBusiness Schema Markup -->
@@ -70,6 +75,11 @@
         <img src="assets/logo.png" alt="Dentalno estetski studio Čelesnik" style="width: auto; object-fit: contain;" id="header-logo-img">
       </a>
       
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <nav class="nav-menu" id="header-navigation-menu">
         <a href="#tradicija" class="nav-link" id="nav-link-tradition">Tradition</a>
         <a href="#storitve" class="nav-link" id="nav-link-services">Services</a>
@@ -81,6 +91,9 @@
       </nav>
       
       <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+          <span class="theme-icon">🌙</span>
+        </button>
         <div class="lang-switcher" id="language-switcher-widget">
           <a href="index.html" class="lang-btn" id="lang-sl-btn">SL</a>
           <a href="en.html" class="lang-btn active" id="lang-en-btn">EN</a>
@@ -299,7 +312,7 @@
           <img src="assets/gallery_3.webp" alt="Precise work by dr. Nina Čelesnik" loading="lazy">
           <div class="gallery-overlay-hover">
             <span class="gallery-tag">Specialist Care</span>
-            <h4 class="gallery-title">Precision & Empathy</h4>
+            <h4 class="gallery-title">Precision & Aesthetics</h4>
           </div>
         </div>
         <!-- Gallery Item 4 -->
@@ -329,23 +342,23 @@
       </div>
 
 
-
   <!-- ==========================================
      LAKE BLED DESTINATION SECTION
      ========================================== -->
-    </section>
+  </section>
 
   <section id="bled" style="position:relative; overflow:hidden; min-height: 220px; display:flex; align-items:center; padding-top: 12px; padding-bottom: 12px;">
     <img src="assets/lake_bled_wellness.webp" alt="Lake Bled" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0;">
     <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,rgba(20,32,46,0.82) 0%,rgba(20,32,46,0.5) 60%,rgba(20,32,46,0.2) 100%);z-index:1;"></div>
     <div class="container" style="position:relative;z-index:2;">
-      <div style="max-width: 600px;">
-        <span class="badge" style="background-color: var(--color-secondary); color: var(--color-text-light);">Slovenian Wellness Paradise</span>
-        <h2 style="font-family: var(--font-heading); font-size: 2.5rem; color: #fff; margin-top: 15px; margin-bottom: 20px; font-weight: 700; line-height: 1.2;">Combine Your Smile Transformation with a Restful Holiday</h2>
-        <p style="color: rgba(255,255,255,0.9); font-size: 1.05rem; line-height: 1.6; margin-bottom: 30px;">
-          Treat your teeth to top-tier care while enjoying a calming alpine break at Lake Bled. Pristine mountain lakes, fresh air, and relaxing wellness options will ensure a stress-free, premium recovery.
-        </p>
-        <a href="#narocanje" class="btn btn-primary" style="box-shadow: 0 10px 20px rgba(0,0,0,0.2);">Plan Your Visit</a>
+      <div style="max-width:680px;">
+        <span class="badge" style="background-color:rgba(255,255,255,0.12);color:var(--color-secondary);margin-bottom:20px;display:inline-block;">Bled, Slovenia</span>
+        <h2 style="color:#fff;font-size:clamp(1.8rem,4vw,2.8rem);margin-bottom:20px;line-height:1.2;">Combine Your Dental Visit with a<br><span style="color:var(--color-secondary);">Relaxing Holiday at Lake Bled</span></h2>
+        <p style="color:rgba(255,255,255,0.88);font-size:1.05rem;line-height:1.75;margin-bottom:28px;">Our clinic is located in the heart of Bled — just a short walk from the iconic lake with its island, Bled Castle, and the entrance to Triglav National Park. Many of our patients from Austria, Italy, and all over Europe combine their dental treatment with a relaxing weekend or holiday in one of the most beautiful alpine destinations in the world.</p>
+        <div style="display:flex;gap:16px;flex-wrap:wrap;">
+          <a href="#narocanje" class="btn btn-primary" id="bled-section-booking-btn">Book Appointment</a>
+          <a href="https://maps.google.com/?q=Bled+Slovenia" target="_blank" rel="noopener" class="btn btn-outline" id="bled-section-maps-btn" style="color:#fff;border-color:rgba(255,255,255,0.5);">Explore Bled</a>
+        </div>
       </div>
     </div>
   </section>
@@ -775,8 +788,8 @@
 
     <div class="container footer-bottom" id="footer-terms-row">
       <p>© 2026 Dental Aesthetic Studio Nina Čelesnik. All rights reserved.</p>
-      <p>Local SEO Optimization • Bled, Slovenia</p>
-     | <a href="privacy_en.html" style="color: var(--color-secondary);">Privacy & Terms</a></div>
+      <p><a href="#" style="color: var(--color-secondary);">Privacy & Terms</a> • Bled, Slovenia</p>
+    </div>
   </footer>
 
   <!-- Scripts -->
