@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="sl" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Preconnect for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Critical Above-the-Fold CSS Inline -->
+  <style>
+    :root{--color-primary:hsl(218,32%,16%);--color-secondary:hsl(38,32%,54%);--color-secondary-hover:hsl(38,38%,46%);--color-bg-base:hsl(210,20%,98%);--color-text-dark:hsl(218,25%,12%);--color-text-light:hsl(210,15%,94%);--color-muted:hsl(218,12%,42%);--color-glass-bg:rgba(255,255,255,0.75);--color-glass-border:rgba(158,142,112,0.15);--font-heading:'Outfit',sans-serif;--font-body:'Inter',sans-serif;--max-width:1280px;--header-height:80px;--border-radius-sm:8px;--border-radius-md:16px;--transition-smooth:all 0.4s cubic-bezier(0.16,1,0.3,1);--transition-fast:all 0.2s ease}.*{box-sizing:border-box;margin:0;padding:0}body{font-family:var(--font-body);background-color:var(--color-bg-base);color:var(--color-text-dark);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:500;color:var(--color-primary);line-height:1.25}.hero{height:100vh;min-height:700px;position:relative;overflow:hidden;display:flex;align-items:center;color:#fff;background-color:var(--color-primary)}.hero-video-bg{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;opacity:0.45;z-index:1}.hero-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(to bottom,rgba(28,41,54,0.8)0%,rgba(18,22,26,0.8)100%);z-index:2}.hero .container{z-index:3}.hero-content{max-width:680px;animation:fadeInUp 1s cubic-bezier(0.16,1,0.3,1)both}.hero h1{font-size:3.5rem;font-weight:600;color:#fff;margin-bottom:24px;letter-spacing:-0.02em;line-height:1.15}.hero h1 span{color:var(--color-secondary)}.hero-desc{font-size:1.25rem;color:var(--color-text-light);margin-bottom:40px;font-weight:300}.hero-buttons{display:flex;gap:16px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 28px;font-family:var(--font-heading);font-weight:500;font-size:0.95rem;border-radius:var(--border-radius-sm);border:none;cursor:pointer;transition:var(--transition-smooth);letter-spacing:0.02em}.btn-prima...
+  </style>
+
+  <!-- Preload critical hero image -->
+  <link rel="preload" as="image" href="assets/hero_smile.webp">
+
+  <!-- Premium SEO Meta Tags -->
+  <title>O nas | Dentalno estetski studio dr. Nina Čelesnik | Bled</title>
+  <meta name="description" content="Spoznajte zgodovino naše ordinacije — več kot 50 let družinske tradicije. Dr. Emil Čelesnik, pionir estetskega porcelana, in dr. Nina Čelesnik, ki nadaljuje zapuščino.">
+  <meta name="keywords" content="o nas, zgodovina, Emil Čelesnik, Nina Čelesnik, zobozdravnik Bled, tradicija, porcelan, estetika">
+  <link rel="canonical" href="https://isakzvegelj.github.io/celesnik-dental-website/o-nas.html">
+
+  <!-- Hreflang for Multilingual SEO -->
+  <link rel="alternate" hreflang="sl" href="https://isakzvegelj.github.io/celesnik-dental-website/o-nas.html">
+  <link rel="alternate" hreflang="en" href="https://isakzvegelj.github.io/celesnik-dental-website/o-nas_en.html">
+  <link rel="alternate" hreflang="de" href="https://isakzvegelj.github.io/celesnik-dental-website/o-nas_de.html">
+  <link rel="alternate" hreflang="it" href="https://isakzvegelj.github.io/celesnik-dental-website/o-nas_it.html">
+  <link rel="alternate" hreflang="x-default" href="https://isakzvegelj.github.io/celesnik-dental-website/o-nas.html">
+
+  <!-- Open Graph (Facebook/Social) -->
+  <meta property="og:title" content="O nas | Dentalno estetski studio dr. Nina Čelesnik">
+  <meta property="og:description" content="Več kot 50 let družinske tradicije v zobozdravstvu. Spoznajte zgodovino dr. Emila Čelesnika in njegove zapuščine.">
+  <meta property="og:image" content="https://isakzvegelj.github.io/celesnik-dental-website/assets/hero_smile.webp">
+  <meta property="og:type" content="website">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="styles.css"></noscript>
+
+  <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23121c26%22/><text y=%2272%22 x=%2225%22 font-family=%22serif%22 font-size=%2265%22 font-weight=%22bold%22 fill=%22%239e8e70%22>Č</text></svg>">
+
+  <!-- Skip to content for accessibility -->
+  <style>#skip-to-content{position:absolute;top:-40px;left:0;background:var(--color-primary);color:#fff;padding:8px 16px;z-index:10000;transition:top 0.3s}#skip-to-content:focus{top:0}</style>
+
+  <!-- ==========================================
+     JSON-LD LocalBusiness Schema Markup
+     ========================================== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "Dentalno estetski studio Nina Čelesnik",
+    "image": "assets/logo.png",
+    "@id": "https://isakzvegelj.github.io/celesnik-dental-website/o-nas.html#dentist",
+    "url": "https://isakzvegelj.github.io/celesnik-dental-website/o-nas.html",
+    "telephone": "+386****0801",
+    "email": "des.celesnik@gmail.com",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Prešernova cesta 15 (DES)",
+      "addressLocality": "Bled",
+      "postalCode": "4260",
+      "addressCountry": "SI"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 46.3688,
+      "longitude": 14.1142
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "16:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/ninacelesnik/"
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "87"
+    }
+  }
+  </script>
+</head>
+<body>
+  <a href="#main-content" id="skip-to-content" style="position:absolute;top:-40px;left:0;background:var(--color-primary);color:#fff;padding:8px 16px;z-index:10000;transition:top 0.3s">Skip to main content</a>
+
+  <!-- ==========================================
+       NAVIGATION HEADER
+       ========================================== -->
+  <header class="site-header" id="main-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo" id="header-logo" style="gap: 16px;">
+        <img src="assets/logo.png" alt="Dentalno estetski studio Čelesnik" style="width: auto; object-fit: contain;" id="header-logo-img">
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Odpri menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav-menu" id="header-navigation-menu">
+        <a href="index.html#tradicija" class="nav-link" id="nav-link-tradition">Tradicija</a>
+        <a href="index.html#storitve" class="nav-link" id="nav-link-services">Storitve</a>
+        <a href="index.html#galerija" class="nav-link" id="nav-link-gallery">Galerija</a>
+        <a href="index.html#ekipa" class="nav-link" id="nav-link-team">Ekipa</a>
+        <a href="index.html#mnenja" class="nav-link" id="nav-link-reviews">Mnenja</a>
+        <a href="index.html#narocanje" class="nav-link" id="nav-link-booking">Naročanje</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+          <span class="theme-icon">🌙</span>
+        </button>
+        <div class="lang-switcher" id="language-switcher-widget">
+          <a href="o-nas.html" class="lang-btn active" id="lang-sl-btn">SL</a>
+          <a href="o-nas_en.html" class="lang-btn" id="lang-en-btn">EN</a>
+          <a href="o-nas_de.html" class="lang-btn" id="lang-de-btn">DE</a>
+          <a href="o-nas_it.html" class="lang-btn" id="lang-it-btn">IT</a>
+        </div>
+        <a href="index.html#narocanje" class="btn btn-outline" style="padding: 10px 20px; font-size: 0.85rem;" id="nav-action-booking-btn">Naročite se</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       HERO SECTION
+       ========================================== -->
+  <section class="hero" id="about-hero" aria-label="About us hero banner">
+    <video class="hero-video-bg" autoplay muted loop playsinline poster="assets/hero_smile.webp">
+      <source src="assets/hero_video.mp4" type="video/mp4">
+      <source src="assets/hero_smile.webp" type="image/webp">
+    </video>
+    <div class="hero-overlay" aria-hidden="true"></div>
+
+    <div class="container">
+      <div class="hero-content">
+        <span class="badge" id="hero-badge-tag">Več kot 50 let družinske tradicije</span>
+        <h1>Dentalno estetski studio <span>dr. Nina Čelesnik</span></h1>
+        <p class="hero-desc">Zgodovina, umetnost in predanost popolnosti. Od leta 1971 ustvarjamo nasmehe, ki trajajo generacije — z znanjem, estetskim čutom in druščino, ki jo povezuje ljubezen do obrti.</p>
+        <div class="hero-buttons">
+          <a href="index.html#narocanje" class="btn btn-primary" id="hero-primary-cta-btn">Rezervirajte termin</a>
+          <a href="#zgodovina" class="btn btn-outline hero-btn-alt" id="hero-secondary-cta-btn">Spoznajte našo zgodovino</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main content for skip link -->
+  <main id="main-content">
+
+  <!-- ==========================================
+       DR. EMIL ČELESNIK — DETAILED HISTORY
+       ========================================== -->
+  <section class="section-padding" id="zgodovina">
+    <div class="container">
+      <div class="text-center">
+        <span class="badge scroll-animate scroll-delay-1">Zgodovina & Zapuščina</span>
+        <h2 class="section-title scroll-animate">Dr. Emil Čelesnik — Pionir estetskega porcelana</h2>
+        <p class="section-subtitle scroll-animate scroll-delay-1">Ustanovitelj naše ordinacije in eden prvih zasebnih zobozdravnikov v Sloveniji. Njegova vizija je oblikovala estetsko zobozdravstvo, kot ga poznamo danes.</p>
+      </div>
+
+      <div class="concept-grid" style="margin-top: 60px;">
+        <div class="concept-img-wrapper scroll-animate-left" id="concept-visual-wrapper">
+          <img src="assets/gallery_3.webp" alt="Precizno zobozdravstveno delo dr. Nine Čelesnik" class="concept-img" id="concept-primary-image">
+          <div class="concept-badge" id="concept-badge-widget">
+            <div class="concept-badge-title">dr. Nina Čelesnik</div>
+            <div class="concept-badge-sub">Nadaljevanje zapuščine dr. Emila Čelesnika</div>
+          </div>
+        </div>
+
+        <div class="concept-text scroll-animate-right" id="concept-text-container">
+          <h3>Ustanovitev leta 1971</h3>
+          <p>Dr. Emil Čelesnik je leta 1971 ustanovil našo zobozdravstveno ordinacijo na Bledu in s tem postal eden prvih zasebnih zobozdravnikov v Sloveniji. V času, ko je bilo zasebno zobozdravstveno delovanje še v povojih, je dr. Emil pokazal izjemnega poguma in vizijo. Prinesel je napredne tehnike estetskega porcelana v našo regijo in postavil temelje moderne estetske stomatologije, ki danes veljajo za standard.</p>
+
+          <h3 style="margin-top: 28px;">Umetniška vizija — posnemanje narave</h3>
+          <p>Za dr. Emila Čelesnika zobozdravstvo ni bila samo medicina — bila je umetnost. Njegova temeljna filozofija je bila, da mora vsak zob, ki ga ustvari zobozdravnik, biti popolna reprodukcija narave. Ni iskal samo funkcije — iskal je popolno estetiko, zobe, ki niso le zdravi, ampak resnično lepi. Vsaka krona, vsak mostiček, vsaka luska je bila za njega umetniško delo, ki mora biti nerazločljivo od naravnega zoba. To vizijo je povzel v svojem znamenitem izreku: <em>»Umetnost je reprodukcija resničnosti.«</em></p>
+
+          <h3 style="margin-top: 28px;">Mednarodne razstave in priznanja</h3>
+          <p>Dr. Emilova dela so osupnila mednarodno strokovno javnost. Leta <strong>1986</strong> je na kongresu v <strong>Beogradu</strong> predstavil izjemno rekonstrukcijo človeške lobanje s porcelanskimi zobji — delo, ki je dokazovalo njegovo sposobnost popolnega posnemanja naravne zobne anatomije. Leta <strong>1989</strong> je na mednarodni razstavi v <strong>Nürnbergu</strong> predstavil svojo najbolj slavno mojstrovino: porcelanski zob z zlatim kačjem motivom, na katerem je bilo vpisano <strong>»UMETNOST JE REPRODUKCIJA RESNIČNOSTI«</strong>. To delo je postalo simbol njegovega umetniškega pristopa k zobozdravstvu.</p>
+
+          <h3 style="margin-top: 28px;">Mednarodni vpliv — posebej na Japonskem</h3>
+          <p>Dr. Emilova dela so presegla meje Slovenije. Njegove tehnike estetskega porcelana so privabile pozornost strokovnjakov po vsem svetu, še posebej na <strong>Japonskem</strong>, kjer je estetska preciznost in obrtništvo zelo cenjeno. Njegova dela so bila predstavljena na mednarodnih kongresih in publikacijah, kar je prispevalo k mednarodni prepoznavnosti slovenskega estetskega zobozdravstva.</p>
+
+          <h3 style="margin-top: 28px;">Delovanje v Opatiji, Hrvaška</h3>
+          <p>Poleg dela na Bledu je dr. Emil Čelesnik deloval tudi v <strong>Opatiji na Hrvaškem</strong>, kjer je s svojim znanjem in umetniškim pristopom služil mednarodnim pacientom. To mednarodno izkušnja je obogatila njegov pristop in še okrepila njegovo prepoznavnost kot vodilnega strokovnjaka za estetsko zobozdravstvo v regiji.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       QUOTE SECTION
+       ========================================== -->
+  <section class="section-padding" style="background-color: var(--color-primary); color: #fff; text-align: center;" id="quote-section">
+    <div class="container" style="max-width: 800px;">
+      <div class="concept-quote" style="font-size: 1.8rem; font-style: italic; color: var(--color-secondary); border-left: none; padding: 0; margin-bottom: 20px;">
+        "Umetnost je reprodukcija resničnosti."
+      </div>
+      <p style="color: rgba(255,255,255,0.7); font-size: 1rem;">— dr. Emil Čelesnik</p>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       PRACTICE TODAY — DR. NINA ČELESNIK
+       ========================================== -->
+  <section class="section-padding" id="danes">
+    <div class="container">
+      <div class="text-center">
+        <span class="badge scroll-animate scroll-delay-1">Ordinacija danes</span>
+        <h2 class="section-title scroll-animate">Dr. Nina Čelesnik — Vodja ordinacije</h2>
+        <p class="section-subtitle scroll-animate scroll-delay-1">Bogato zapuščino dr. Emila Čelesnika danes z enako ljubeznijo, preciznostjo in estetskim čutom nadaljuje njegova hči.</p>
+      </div>
+
+      <div class="concept-grid" style="margin-top: 60px;">
+        <div class="concept-img-wrapper scroll-animate-left">
+          <img src="assets/doctor_nina.png" alt="dr. Nina Čelesnik" class="concept-img" style="object-fit: cover;">
+        </div>
+
+        <div class="concept-text scroll-animate-right">
+          <h3>Nadaljevanje druščine</h3>
+          <p>Dr. Nina Čelesnik je hči ustanovitelja dr. Emila Čelesnika in z njim deli globoko predanost estetiki in zobozdravstveni odličnosti. Z več kot 20 leti izkušenj velja za eno vodilnih strokovnjakinj za estetsko prenovo zobnih lokov in specialistično protetiko v Sloveniji. Redno sodeluje z evropskimi specialisti in je članica Mednarodnega združenja za implantologijo (ITI).</p>
+
+          <p style="margin-top: 16px;">Njena filozofija je enaka kot njenega očeta: vaš nasmeh naj bo ne le zdrav, ampak resnično čudovit. Dr. Nina združuje umetniško zapuščino svojega očeta z najnovejšimi tehnologijami in pristopi — od digitalnega načrtovanja nasmeha do minimalno invazivnih tehnik.</p>
+
+          <div class="team-bullets" style="margin-top: 24px;">
+            <div class="team-bullet">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Specializacija v fiksni protetiki in estetskih luskah (Veneers)</span>
+            </div>
+            <div class="team-bullet">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Članica Mednarodnega združenja za implantologijo (ITI)</span>
+            </div>
+            <div class="team-bullet">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Govori tekoče slovensko, angleško, nemško in italijansko</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       TIMELINE / MILESTONES
+       ========================================== -->
+  <section class="section-padding" style="background-color: rgba(28, 41, 54, 0.02); border-top: 1px solid var(--color-glass-border); border-bottom: 1px solid var(--color-glass-border);" id="casovnica">
+    <div class="container">
+      <div class="text-center">
+        <span class="badge scroll-animate scroll-delay-1">Časovnica</span>
+        <h2 class="section-title scroll-animate">Ključni mejniki naše zgodovine</h2>
+        <p class="section-subtitle scroll-animate scroll-delay-1">Od prvih korakov do današnje odličnosti — vsaka dejavnost je zapisana v zgodovino slovenskega zobozdravstva.</p>
+      </div>
+
+      <div style="max-width: 700px; margin: 60px auto 0; position: relative;">
+        <!-- Timeline line -->
+        <div style="position: absolute; left: 24px; top: 0; bottom: 0; width: 2px; background: var(--color-secondary); opacity: 0.3;"></div>
+
+        <!-- 1971 -->
+        <div class="scroll-animate scroll-delay-1" style="display: flex; gap: 24px; margin-bottom: 40px; position: relative;">
+          <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--color-secondary); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; z-index: 1;">1971</div>
+          <div>
+            <h4 style="margin-bottom: 8px;">Ustanovitev ordinacije</h4>
+            <p style="color: var(--color-muted);">Dr. Emil Čelesnik ustanovi zobozdravstveno ordinacijo na Bledu in postane eden prvih zasebnih zobozdravnikov v Sloveniji.</p>
+          </div>
+        </div>
+
+        <!-- 1980s -->
+        <div class="scroll-animate scroll-delay-2" style="display: flex; gap: 24px; margin-bottom: 40px; position: relative;">
+          <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--color-secondary); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; z-index: 1;">1980</div>
+          <div>
+            <h4 style="margin-bottom: 8px;">Pionir estetskega porcelana</h4>
+            <p style="color: var(--color-muted);">Dr. Emil uvede napredne tehnike estetskega porcelana v Slovenijo in začne oblikovati vizijo estetskega zobozdravstva, ki posnema naravo.</p>
+          </div>
+        </div>
+
+        <!-- 1986 -->
+        <div class="scroll-animate scroll-delay-3" style="display: flex; gap: 24px; margin-bottom: 40px; position: relative;">
+          <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--color-secondary); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; z-index: 1;">1986</div>
+          <div>
+            <h4 style="margin-bottom: 8px;">Kongres v Beogradu</h4>
+            <p style="color: var(--color-muted);">Dr. Emil predstavi izjemno rekonstrukcijo človeške lobanje s porcelanskimi zobji na mednarodnem kongresu v Beogradu — delo, ki osupne strokovno javnost.</p>
+          </div>
+        </div>
+
+        <!-- 1989 -->
+        <div class="scroll-animate scroll-delay-4" style="display: flex; gap: 24px; margin-bottom: 40px; position: relative;">
+          <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--color-secondary); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; z-index: 1;">1989</div>
+          <div>
+            <h4 style="margin-bottom: 8px;">Razstava v Nürnbergu</h4>
+            <p style="color: var(--color-muted);">Predstavitev slavnega porcelanskega zoba z zlatim kačjem motivom in napisom »UMETNOST JE REPRODUKCIJA RESNIČNOSTI« na mednarodni razstavi v Nürnbergu.</p>
+          </div>
+        </div>
+
+        <!-- 1990s-2000s -->
+        <div class="scroll-animate scroll-delay-5" style="display: flex; gap: 24px; margin-bottom: 40px; position: relative;">
+          <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--color-secondary); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; z-index: 1;">2000</div>
+          <div>
+            <h4 style="margin-bottom: 8px;">Mednarodni vpliv</h4>
+            <p style="color: var(--color-muted);">Dr. Emilova dela pridobivajo mednarodno prepoznavnost, posebej na Japonskem. Delovanje v Opatiji na Hrvaškem še okrepi mednarodno prisotnost.</p>
+          </div>
+        </div>
+
+        <!-- Today -->
+        <div class="scroll-animate scroll-delay-6" style="display: flex; gap: 24px; position: relative;">
+          <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--color-primary); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.75rem; flex-shrink: 0; z-index: 1;">Danes</div>
+          <div>
+            <h4 style="margin-bottom: 8px;">Dr. Nina Čelesnik vodi ordinacijo</h4>
+            <p style="color: var(--color-muted);">Dr. Nina Čelesnik združuje umetniško zapuščino svojega očeta z najnovejšimi tehnologijami. Ordinacija ponuja vrhunsko estetsko in splošno zobozdravstveno oskrbo v srcu Bleda.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       CTA SECTION
+       ========================================== -->
+  <section class="section-padding" id="cta-section">
+    <div class="container text-center">
+      <h2 class="section-title scroll-animate">Pridružite se generacijam zadovoljnih pacientov</h2>
+      <p class="section-subtitle scroll-animate scroll-delay-1" style="max-width: 600px; margin-left: auto; margin-right: auto;">Naša zgodovina je zgodoba o predanosti, umetnosti in zaupanju. Tudi vi ste lahko del te zgodbe — rezervirajte svoj termin še danes.</p>
+      <div style="margin-top: 32px; display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <a href="index.html#narocanje" class="btn btn-primary" id="cta-primary-btn">Rezervirajte termin</a>
+        <a href="tel:+38645750801" class="btn btn-outline" id="cta-secondary-btn">Pokličite nas</a>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="site-footer" id="main-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand" id="footer-branding-column">
+        <a href="index.html" class="logo" style="margin-bottom: 20px;">
+          <img src="assets/logo.png" alt="Dentalno estetski studio Čelesnik" style="height: 85px; width: auto; object-fit: contain;" id="footer-logo-img">
+        </a>
+        <p class="footer-desc">Najdaljša tradicija zasebnega estetskega in splošnega zobozdravstva v Sloveniji, ki temelji na vrhunskem znanju in čutu za pacienta.</p>
+      </div>
+
+      <div id="footer-links-column">
+        <h4 class="footer-title">Povezave</h4>
+        <div class="footer-links">
+          <a href="index.html#tradicija" class="footer-link">Naša Tradicija</a>
+          <a href="index.html#storitve" class="footer-link">Raven Oskrbe</a>
+          <a href="index.html#galerija" class="footer-link">Galerija del</a>
+          <a href="index.html#ekipa" class="footer-link">Spoznajte Ekipo</a>
+          <a href="index.html#mnenja" class="footer-link">Mnenja pacientov</a>
+          <a href="index.html#narocanje" class="footer-link">Spletno Naročanje</a>
+        </div>
+      </div>
+
+      <div id="footer-hours-column">
+        <h4 class="footer-title">Delovni čas & Kontakt</h4>
+        <div class="footer-hours-row">
+          <span>Ponedeljek - Petek</span>
+          <span>08:00 - 16:00</span>
+        </div>
+        <div class="footer-hours-row" style="border: none;">
+          <span>Sobota, Nedelja & Prazniki</span>
+          <span>Zaprto (po dogovoru)</span>
+        </div>
+        <p style="margin-top: 20px; font-size: 0.9rem; color: var(--color-text-light);">
+          Prešernova cesta 15, 4260 Bled<br>
+          Telefon: +386 (0)4 575 08 01<br>
+          E-pošta: des.celesnik@gmail.com
+        </p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom" id="footer-terms-row">
+      <p>© 2026 Dentalno estetski studio Nina Čelesnik. Vse pravice pridržane.</p>
+      <p><a href="privacy.html" style="color: var(--color-secondary);">Zasebnost in pogoji</a> • Bled, Slovenija</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>

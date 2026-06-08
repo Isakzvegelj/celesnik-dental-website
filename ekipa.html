@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="sl" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Preconnect for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Critical Above-the-Fold CSS Inline -->
+  <style>
+    :root{--color-primary:hsl(218,32%,16%);--color-secondary:hsl(38,32%,54%);--color-secondary-hover:hsl(38,38%,46%);--color-bg-base:hsl(210,20%,98%);--color-text-dark:hsl(218,25%,12%);--color-text-light:hsl(210,15%,94%);--color-muted:hsl(218,12%,42%);--color-glass-bg:rgba(255,255,255,0.75);--color-glass-border:rgba(158,142,112,0.15);--font-heading:'Outfit',sans-serif;--font-body:'Inter',sans-serif;--max-width:1280px;--header-height:80px;--border-radius-sm:8px;--border-radius-md:16px;--transition-smooth:all 0.4s cubic-bezier(0.16,1,0.3,1);--transition-fast:all 0.2s ease}.*{box-sizing:border-box;margin:0;padding:0}body{font-family:var(--font-body);background-color:var(--color-bg-base);color:var(--color-text-dark);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:500;color:var(--color-primary);line-height:1.25}.hero{height:100vh;min-height:700px;position:relative;overflow:hidden;display:flex;align-items:center;color:#fff;background-color:var(--color-primary)}.hero-video-bg{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;opacity:0.45;z-index:1}.hero-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(to bottom,rgba(28,41,54,0.8)0%,rgba(18,22,26,0.8)100%);z-index:2}.hero .container{z-index:3}.hero-content{max-width:680px;animation:fadeInUp 1s cubic-bezier(0.16,1,0.3,1)both}.hero h1{font-size:3.5rem;font-weight:600;color:#fff;margin-bottom:24px;letter-spacing:-0.02em;line-height:1.15}.hero h1 span{color:var(--color-secondary)}.hero-desc{font-size:1.25rem;color:var(--color-text-light);margin-bottom:40px;font-weight:300}.hero-buttons{display:flex;gap:16px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 28px;font-family:var(--font-heading);font-weight:500;font-size:0.95rem;border-radius:var(--border-radius-sm);border:none;cursor:pointer;transition:var(--transition-smooth);letter-spacing:0.02em}.btn-primary{background-color:var(--color-primary);color:#fff;border:1px solid var(--color-primary)}.btn-primary:hover{background-color:var(--color-secondary);border-color:var(--color-secondary);transform:translateY(-2px)}.btn-outline{background-color:transparent;color:var(--color-primary);border:1px solid var(--color-primary)}.btn-outline:hover{background-color:var(--color-primary);color:#fff;transform:translateY(-2px)}.site-header{position:fixed;top:0;left:0;width:100%;height:var(--header-height);z-index:1000;transition:var(--transition-smooth);background-color:rgba(18,28,38,0.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(158,142,112,0.2)}.nav-container{height:100%;display:flex;align-items:center;justify-content:space-between;max-width:var(--max-width);margin:0 auto;padding:0 24px}.logo{display:flex;align-items:center;gap:12px}.nav-menu{display:flex;align-items:center;gap:32px}.nav-link{font-family:var(--font-heading);font-size:0.95rem;font-weight:500;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,0.3)}.nav-actions{display:flex;align-items:center;gap:20px}.lang-switcher{display:flex;gap:6px;border:1px solid rgba(158,142,112,0.3);padding:4px;border-radius:var(--border-radius-sm);background-color:rgba(255,255,255,0.06)}.lang-btn{border:none;background:none;font-family:var(--font-heading);font-size:0.75rem;font-weight:600;padding:4px 8px;border-radius:4px;cursor:pointer;color:rgba(255,255,255,0.8)}.lang-btn.active{background-color:var(--color-secondary);color:var(--color-primary)}
+  </style>
+
+  <!-- Preload critical hero image -->
+  <link rel="preload" as="image" href="assets/hero_smile.webp">
+
+  <!-- Premium SEO Meta Tags -->
+  <title>Ekipa | Dentalno estetski studio dr. Nina Čelesnik</title>
+  <meta name="description" content="Spoznajte ekipo Dentalnega estetskega studia dr. Nina Čelesnik na Bledu. Dr. Nina Čelesnik, Nataša Colja in Mateja Novak — vrhunski strokovnjaki za vaš nasmeh.">
+  <meta name="keywords" content="zobozdravnik Bled, Nina Čelesnik, ekipa, zobozdravstvena ordinacija Bled, zobozdravstvena asistentka">
+  <link rel="canonical" href="https://isakzvegelj.github.io/celesnik-dental-website/ekipa.html">
+
+  <!-- Hreflang for Multilingual SEO -->
+  <link rel="alternate" hreflang="sl" href="https://isakzvegelj.github.io/celesnik-dental-website/ekipa.html">
+  <link rel="alternate" hreflang="en" href="https://isakzvegelj.github.io/celesnik-dental-website/ekipa_en.html">
+  <link rel="alternate" hreflang="de" href="https://isakzvegelj.github.io/celesnik-dental-website/ekipa_de.html">
+  <link rel="alternate" hreflang="it" href="https://isakzvegelj.github.io/celesnik-dental-website/ekipa_it.html">
+  <link rel="alternate" hreflang="x-default" href="https://isakzvegelj.github.io/celesnik-dental-website/ekipa.html">
+
+  <!-- Open Graph (Facebook/Social) -->
+  <meta property="og:title" content="Ekipa | Dentalno estetski studio dr. Nina Čelesnik">
+  <meta property="og:description" content="Spoznajte našo ekipo vrhunskih strokovnjakov za estetsko zobozdravstvo na Bledu.">
+  <meta property="og:image" content="https://isakzvegelj.github.io/celesnik-dental-website/assets/hero_smile.webp">
+  <meta property="og:type" content="website">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="styles.css"></noscript>
+
+  <!-- Unique IDs on all interactive elements for structured testing -->
+  <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23121c26%22/><text y=%2272%22 x=%2225%22 font-family=%22serif%22 font-size=%2265%22 font-weight=%22bold%22 fill=%22%239e8e70%22>Č</text></svg>">
+
+  <!-- Skip to content for accessibility -->
+  <style>#skip-to-content{position:absolute;top:-40px;left:0;background:var(--color-primary);color:#fff;padding:8px 16px;z-index:10000;transition:top 0.3s}#skip-to-content:focus{top:0}</style>
+
+  <!-- ==========================================
+     JSON-LD LocalBusiness Schema Markup for Local SEO
+     ========================================== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "Dentalno estetski studio Nina Čelesnik",
+    "image": "assets/logo.png",
+    "@id": "https://isakzvegelj.github.io/celesnik-dental-website/ekipa.html#dentist",
+    "url": "https://isakzvegelj.github.io/celesnik-dental-website/ekipa.html",
+    "telephone": "+386****0801",
+    "email": "des.celesnik@gmail.com",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Prešernova cesta 15 (DES)",
+      "addressLocality": "Bled",
+      "postalCode": "4260",
+      "addressCountry": "SI"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 46.3688,
+      "longitude": 14.1142
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "16:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/ninacelesnik/"
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "87"
+    }
+  }
+  </script>
+</head>
+<body>
+  <a href="#main-content" id="skip-to-content" style="position:absolute;top:-40px;left:0;background:var(--color-primary);color:#fff;padding:8px 16px;z-index:10000;transition:top 0.3s">Skip to main content</a>
+
+  <!-- ==========================================
+       NAVIGATION HEADER
+       ========================================== -->
+  <header class="site-header" id="main-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo" id="header-logo" style="gap: 16px;">
+        <img src="assets/logo.png" alt="Dentalno estetski studio Čelesnik" style="width: auto; object-fit: contain;" id="header-logo-img">
+      </a>
+
+          <button class="nav-toggle" id="nav-toggle" aria-label="Odpri menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+      <nav class="nav-menu" id="header-navigation-menu">
+        <a href="index.html#tradicija" class="nav-link" id="nav-link-tradition">Tradicija</a>
+        <a href="index.html#storitve" class="nav-link" id="nav-link-services">Storitve</a>
+        <a href="index.html#galerija" class="nav-link" id="nav-link-gallery">Galerija</a>
+        <a href="ekipa.html" class="nav-link active" id="nav-link-team">Ekipa</a>
+        <a href="index.html#mnenja" class="nav-link" id="nav-link-reviews">Mnenja</a>
+        <a href="index.html#narocanje" class="nav-link" id="nav-link-booking">Naročanje</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+          <span class="theme-icon">🌙</span>
+        </button>
+        <!-- Language Switcher Redirection for multi-page Local SEO indexing -->
+        <div class="lang-switcher" id="language-switcher-widget">
+          <a href="ekipa.html" class="lang-btn active" id="lang-sl-btn">SL</a>
+          <a href="ekipa_en.html" class="lang-btn" id="lang-en-btn">EN</a>
+          <a href="ekipa_de.html" class="lang-btn" id="lang-de-btn">DE</a>
+          <a href="ekipa_it.html" class="lang-btn" id="lang-it-btn">IT</a>
+        </div>
+        <a href="index.html#narocanje" class="btn btn-outline" style="padding: 10px 20px; font-size: 0.85rem;" id="nav-action-booking-btn">Naročite se</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+     TEAM PAGE HERO
+     ========================================== -->
+  <section class="hero" id="team-page-hero" aria-label="Ekipa dentalnega studia">
+    <video class="hero-video-bg" autoplay muted loop playsinline poster="assets/hero_smile.webp">
+      <source src="assets/hero_video.mp4" type="video/mp4">
+      <source src="assets/hero_smile.webp" type="image/webp">
+    </video>
+    <div class="hero-overlay" aria-hidden="true"></div>
+
+    <div class="container">
+      <div class="hero-content">
+        <span class="badge" id="hero-badge-tag">Naša Ekipa</span>
+        <h1>Spoznajte naše <span>strokovnjake</span>.</h1>
+        <p class="hero-desc">Zavezana ekipa z dolgoletnimi izkušnjami, ki z ljubeznijo, preciznostjo in najsodobnejšo opremo skrbi za vaše zdravje in lep nasmeh.</p>
+        <div class="hero-buttons">
+          <a href="#ekipa" class="btn btn-primary" id="hero-primary-cta-btn">Oglejte si ekipo</a>
+          <a href="#narocanje" class="btn btn-outline hero-btn-alt" id="hero-secondary-cta-btn">Rezervirajte termin</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main content for skip link -->
+  <main id="main-content">
+
+  <!-- ==========================================
+     TEAM PROFILES SECTION
+     ========================================== -->
+  <section class="section-padding" id="ekipa">
+    <div class="container">
+      <div class="text-center">
+        <span class="badge scroll-animate scroll-delay-1">Naši Strokovnjaki</span>
+        <h2 class="section-title scroll-animate">Ekipa, ki navdihuje zaupanje</h2>
+        <p class="section-subtitle scroll-animate scroll-delay-1">Vrhunski strokovnjaki in prijazno osebje, ki z ljubeznijo in najsodobnejšo opremo skrbijo za vaše udobje in zdravje.</p>
+      </div>
+
+      <div class="team-grid" id="team-grid-container">
+
+        <!-- DR. NINA ČELESNIK CARD -->
+        <div class="glass-panel team-card" id="team-card-nina">
+          <div class="team-avatar-container">
+            <div class="team-avatar-fallback">NČ</div>
+            <img class="team-avatar-img" src="assets/doctor_nina.png" alt="dr. Nina Čelesnik" onerror="this.style.opacity='0';">
+          </div>
+          <div class="team-name">dr. Nina Čelesnik, dr. dent. med.</div>
+          <div class="team-role">Vodja ordinacije / Estetska zobozdravnica</div>
+          <div class="team-info">
+            <p class="team-bio">Hči ustanovitelja dr. Emila Čelesnika. Z več kot 20 leti izkušenj velja za eno vodilnih strokovnjakinj v estetskih rekonstrukcijah in kompleksni protetiki. Vodilna strokovnjakinja za estetske rekonstrukcije in kompleksno protetiko.</p>
+            <div class="team-bullets">
+              <div class="team-bullet">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Specializacija v fiksni protetiki in estetskih porcelanskih luskah (Veneers)</span>
+              </div>
+              <div class="team-bullet">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Članica Mednarodnega združenja za implantologijo (ITI)</span>
+              </div>
+              <div class="team-bullet">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Govori tekoče slovensko, angleško, nemško in italijansko</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NATAŠA COLJA CARD -->
+        <div class="glass-panel team-card" id="team-card-natasa">
+          <div class="team-avatar-container">
+            <div class="team-avatar-fallback">NC</div>
+            <img class="team-avatar-img" src="assets/assistant_natasa.jpg" alt="Nataša Colja" onerror="this.style.opacity='0';">
+          </div>
+          <div class="team-name">Nataša Colja</div>
+          <div class="team-role">Zobozdravstvena asistentka</div>
+          <div class="team-info">
+            <p class="team-bio">Strokovna in predana asistentka z večletnimi izkušnjami pri asistiranju ob zahtevnih protetičnih posegih. Skrbi za sterilizacijo, higieno in maksimalno udobje pacientov.</p>
+            <div class="team-bullets">
+              <div class="team-bullet">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Asistenca pri zahtevnih estetskih in protetičnih posegih</span>
+              </div>
+              <div class="team-bullet">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Natančna skrb za popolno sterilizacijo in higienske protokole</span>
+              </div>
+              <div class="team-bullet">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Topel, skrben in empatičen sprejem pacientov v ordinaciji</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MATEJA NOVAK CARD -->
+        <div class="glass-panel team-card" id="team-card-mateja">
+          <div class="team-avatar-container">
+            <div class="team-avatar-fallback">MN</div>
+            <img class="team-avatar-img" src="assets/assistant_mateja.jpg" alt="Mateja Novak" onerror="this.style.opacity='0';">
+          </div>
+          <div class="team-name">Mateja Novak</div>
+          <div class="team-role">Zobozdravstvena asistentka</div>
+          <div class="team-info">
+            <p class="team-bio">Zanesljiva in izkušena asistentka, ki z visoko mero profesionalnosti in prijaznosti spremlja paciente skozi celoten proces obravnave. Skrbi za pripravo ordinacije in administrativno podporo.</p>
+            <div class="team-bullets">
+              <div class="team-bullet">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Priprava pacientov in asistiranje pri konzervativnem zdravljenju</span>
+              </div>
+              <div class="team-bullet">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Vodenje kartotek in administrativna koordinacija terminov</span>
+              </div>
+              <div class="team-bullet">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Skrb za dobro počutje ter sproščeno in brezstresno okolje</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+     BOOKING CTA SECTION
+     ========================================== -->
+  <section class="section-padding" id="narocanje" style="background-color: var(--color-primary); color: #fff; position: relative; overflow: hidden;">
+    <div class="container" style="position: relative; z-index: 2;">
+      <div class="text-center">
+        <span class="badge" style="background-color: rgba(255,255,255,0.12); color: var(--color-secondary);">Pridružite se našim pacientom</span>
+        <h2 class="section-title scroll-animate" style="color: #fff;">Rezervirajte svoj termin</h2>
+        <p class="section-subtitle scroll-animate scroll-delay-1" style="color: var(--color-text-light);">Naša ekipa je pripravljena, da poskrbi za vaš nasmeh. Kontaktirajte nas za brezplačen posvet ali rezervacijo.</p>
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 32px;">
+          <a href="index.html#narocanje" class="btn btn-primary" id="team-page-booking-btn">Rezervirajte termin</a>
+          <a href="tel:+38645750801" class="btn btn-outline" id="team-page-call-btn" style="color: #fff; border-color: rgba(255,255,255,0.5);">Pokličite nas</a>
+        </div>
+        <p style="margin-top: 24px; font-size: 0.9rem; color: var(--color-text-light);">
+          📞 +386 (0)4 575 08 01 &nbsp;•&nbsp; ✉️ des.celesnik@gmail.com &nbsp;•&nbsp; 📍 Prešernova cesta 15, 4260 Bled
+        </p>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ==========================================
+     FOOTER
+     ========================================== -->
+  <footer class="site-footer" id="main-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand" id="footer-branding-column">
+        <a href="index.html" class="logo" style="margin-bottom: 20px;">
+          <img src="assets/logo.png" alt="Dentalno estetski studio Čelesnik" style="height: 85px; width: auto; object-fit: contain;" id="footer-logo-img">
+        </a>
+        <p class="footer-desc">Najdaljša tradicija zasebnega estetskega in splošnega zobozdravstva v Sloveniji, ki temelji na vrhunskem znanju in čutu za pacienta.</p>
+      </div>
+
+      <div id="footer-links-column">
+        <h4 class="footer-title">Povezave</h4>
+        <div class="footer-links">
+          <a href="index.html#tradicija" class="footer-link">Naša Tradicija</a>
+          <a href="index.html#storitve" class="footer-link">Raven Oskrbe</a>
+          <a href="index.html#galerija" class="footer-link">Galerija del</a>
+          <a href="ekipa.html" class="footer-link">Spoznajte Ekipo</a>
+          <a href="index.html#mnenja" class="footer-link">Mnenja pacientov</a>
+          <a href="index.html#narocanje" class="footer-link">Spletno Naročanje</a>
+        </div>
+      </div>
+
+      <div id="footer-hours-column">
+        <h4 class="footer-title">Delovni čas & Kontakt</h4>
+        <div class="footer-hours-row">
+          <span>Ponedeljek - Petek</span>
+          <span>08:00 - 16:00</span>
+        </div>
+        <div class="footer-hours-row" style="border: none;">
+          <span>Sobota, Nedelja & Prazniki</span>
+          <span>Zaprto (po dogovoru)</span>
+        </div>
+        <p style="margin-top: 20px; font-size: 0.9rem; color: var(--color-text-light);">
+          Prešernova cesta 15, 4260 Bled<br>
+          Telefon: +386 (0)4 575 08 01<br>
+          E-pošta: des.celesnik@gmail.com
+        </p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom" id="footer-terms-row">
+      <p>© 2026 Dentalno estetski studio Nina Čelesnik. Vse pravice pridržane.</p>
+      <p><a href="privacy.html" style="color: var(--color-secondary);">Zasebnost in pogoji</a> • Bled, Slovenija</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>

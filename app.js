@@ -27,7 +27,41 @@ document.addEventListener('DOMContentLoaded', () => {
   initThemeToggle();
   initScrollAnimations();
   initAmbientAudio();
+  initScrollToTop();
 });
+
+/* ==========================================
+   Scroll-to-Top Button
+   ========================================== */
+function initScrollToTop() {
+  const btn = document.createElement('button');
+  btn.id = 'scroll-to-top';
+  btn.setAttribute('aria-label', 'Scroll to top');
+  btn.innerHTML = '↑';
+  btn.style.cssText = 'position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;background:var(--color-secondary);color:#fff;border:none;font-size:1.2rem;cursor:pointer;opacity:0;visibility:hidden;transition:all 0.3s;z-index:9999;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,0.3);';
+  document.body.appendChild(btn);
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        if (window.scrollY > 400) {
+          btn.style.opacity = '1';
+          btn.style.visibility = 'visible';
+        } else {
+          btn.style.opacity = '0';
+          btn.style.visibility = 'hidden';
+        }
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
 
 /* ==========================================
    Theme Toggle
