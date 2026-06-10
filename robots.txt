@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://celesnikdental.com/sitemap.xml
+Sitemap: https://isakzvegelj.github.io/celesnik-dental-website/sitemap.xml
