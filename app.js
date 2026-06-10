@@ -93,7 +93,7 @@ function initScrollAnimations() {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('animated');
+          entry.target.classList.add('visible');
           observer.unobserve(entry.target);
         }
       });
@@ -101,7 +101,7 @@ function initScrollAnimations() {
 
     elements.forEach(el => observer.observe(el));
   } else {
-    elements.forEach(el => el.classList.add('animated'));
+    elements.forEach(el => el.classList.add('visible'));
   }
 }
 
